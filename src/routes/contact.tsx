@@ -1,0 +1,104 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/site/Reveal";
+import { useState } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { toast } from "sonner";
+
+export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "Contact — Infinite Space Interiors" },
+      { name: "description", content: "Start a project, visit our studio, or simply say hello." },
+      { property: "og:title", content: "Contact Infinite Space" },
+      { property: "og:description", content: "Start a project with our studio." },
+    ],
+  }),
+  component: Contact,
+});
+
+function Contact() {
+  const [sending, setSending] = useState(false);
+
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+    setTimeout(() => {
+      toast.success("Thank you — we'll be in touch within 24 hours.");
+      (e.target as HTMLFormElement).reset();
+      setSending(false);
+    }, 700);
+  }
+
+  return (
+    <div>
+      <section className="pt-40 pb-20">
+        <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-7">
+            <Reveal>
+              <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Get in Touch</p>
+              <h1 className="mt-6 font-serif text-5xl md:text-7xl leading-[1.02] text-balance">
+                Let's design something <em className="italic text-sage-deep">remarkable</em>.
+              </h1>
+              <p className="mt-6 text-muted-foreground max-w-lg leading-relaxed">
+                Tell us a little about your space, your timeline and what you're hoping for.
+                We respond personally within one working day.
+              </p>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <form onSubmit={onSubmit} className="mt-12 grid sm:grid-cols-2 gap-5">
+                <Field label="Name" name="name" required />
+                <Field label="Email" name="email" type="email" required />
+                <Field label="Phone" name="phone" />
+                <Field label="Project type" name="type" placeholder="Residential, Retail…" />
+                <div className="sm:col-span-2">
+                  <Field label="Tell us about your space" name="message" textarea required />
+                </div>
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-charcoal text-cream px-8 py-4 hover:bg-sage-deep disabled:opacity-60 transition-colors"
+                >
+                  {sending ? "Sending…" : "Send Inquiry"} <Send size={16} />
+                </button>
+              </form>
+            </Reveal>
+          </div>
+
+          <aside className="lg:col-span-5 lg:pl-8">
+            <Reveal delay={200}>
+              <div className="bg-cream rounded-sm p-10">
+                <h3 className="font-serif text-2xl">Studio</h3>
+                <ul className="mt-6 space-y-5 text-sm">
+                  <li className="flex gap-4"><MapPin className="text-sage-deep shrink-0 mt-0.5" size={18} /> 12, Design District, Indiranagar, Bengaluru 560038, India</li>
+                  <li className="flex gap-4"><Phone className="text-sage-deep shrink-0 mt-0.5" size={18} /> +91 98765 43210</li>
+                  <li className="flex gap-4"><Mail className="text-sage-deep shrink-0 mt-0.5" size={18} /> hello@infinitespace.studio</li>
+                </ul>
+                <div className="mt-8 pt-8 border-t border-border">
+                  <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground">Studio Hours</p>
+                  <p className="mt-3 font-serif text-lg">Mon — Sat · 10am — 7pm</p>
+                </div>
+              </div>
+            </Reveal>
+          </aside>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function Field({ label, name, type = "text", required, textarea, placeholder }: {
+  label: string; name: string; type?: string; required?: boolean; textarea?: boolean; placeholder?: string;
+}) {
+  const base = "mt-2 w-full bg-transparent border-b border-border focus:border-sage-deep outline-none py-3 text-foreground placeholder:text-muted-foreground/60 transition-colors";
+  return (
+    <label className="block">
+      <span className="text-xs tracking-widest uppercase text-muted-foreground">{label}{required && " *"}</span>
+      {textarea ? (
+        <textarea name={name} required={required} rows={4} placeholder={placeholder} className={base} />
+      ) : (
+        <input name={name} type={type} required={required} placeholder={placeholder} className={base} />
+      )}
+    </label>
+  );
+}
