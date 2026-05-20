@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -7,9 +8,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-20 pb-10">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-2">
-              <span className="h-9 w-9 rounded-full bg-sage flex items-center justify-center font-serif text-charcoal">∞</span>
-              <span className="font-serif text-2xl">Infinite Space</span>
+            <div className="flex items-center gap-2 bg-cream rounded-lg p-3 w-fit">
+              <img src={logo} alt="Infinite Space Interiors" className="h-12 w-auto" />
             </div>
             <p className="mt-6 max-w-md text-cream/70 leading-relaxed">
               Designing elegant spaces that inspire living. Luxury residential,
