@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -32,10 +33,7 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="h-8 w-8 rounded-full bg-sage flex items-center justify-center font-serif text-charcoal text-lg">∞</span>
-          <span className="font-serif text-xl leading-none">
-            Infinite <span className="italic text-sage-deep">Space</span>
-          </span>
+          <img src={logo} alt="Infinite Space Interiors" className="h-10 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
