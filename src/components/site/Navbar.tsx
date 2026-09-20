@@ -24,25 +24,19 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/85 backdrop-blur-md border-b border-border/60 py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
+    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/95 backdrop-blur-md border-b border-border/70 py-3" : "bg-background py-4"}`}>
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <img src={logo} alt="Infinite Space Interiors" className="h-10 w-auto" />
+          <img src={logo} alt="Infinite Space Interiors" className="h-9 w-auto" />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               activeProps={{ className: "text-foreground after:scale-x-100" }}
-              className="relative text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:bg-sage-deep after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+              className="relative text-[0.7rem] font-bold uppercase tracking-[0.12em] text-muted-foreground hover:text-foreground transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-sage-deep after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
               {l.label}
             </Link>
@@ -51,7 +45,7 @@ export function Navbar() {
 
         <Link
           to="/contact"
-          className="hidden lg:inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-2.5 text-sm hover:bg-sage-deep transition-colors"
+          className="hidden lg:inline-flex items-center gap-2 rounded-sm bg-sage-deep text-primary-foreground px-5 py-3 text-[0.7rem] font-bold uppercase tracking-[0.12em] hover:bg-charcoal transition-colors"
         >
           Start a Project
         </Link>

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Sparkles, Check, Plus } from "lucide-react";
 import heroLiving from "@/assets/hero-living.jpg";
 import projKitchen from "@/assets/proj-kitchen.jpg";
 import projBedroom from "@/assets/proj-bedroom.jpg";
@@ -79,58 +79,48 @@ function Home() {
   return (
     <div className="overflow-hidden">
       {/* HERO */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
-        {/* sage blob */}
-        <div className="absolute top-24 left-0 w-[42%] h-[70%] bg-sage rounded-r-[2rem] -z-10" />
-        <div className="absolute top-[55%] right-0 w-[18%] h-[35%] bg-sage-soft rounded-l-[2rem] -z-10 hidden md:block" />
-
-        <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-6 relative z-10">
+      <section className="relative pt-28 pb-10 lg:pt-32 lg:pb-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="relative overflow-hidden rounded-sm bg-charcoal min-h-[650px] lg:min-h-[720px]">
+            <div className="absolute inset-0 lg:left-[43%]">
+              <img src={heroLiving} alt="Luxury living room interior" width={1600} height={1200} className="h-full w-full object-cover opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/55 to-transparent" />
+            </div>
+          <div className="relative z-10 grid min-h-[650px] lg:min-h-[720px] items-end lg:items-center lg:grid-cols-12 p-7 md:p-12 lg:p-16">
+          <div className="lg:col-span-7 relative z-10 text-cream">
             <Reveal>
-              <p className="inline-flex items-center gap-2 text-xs tracking-[0.3em] uppercase text-sage-deep">
-                <Sparkles size={14} /> Infinite Space Studio
+              <p className="eyebrow inline-flex items-center gap-2 text-sage-soft">
+                <Sparkles size={14} /> Design • Build • Transform
               </p>
             </Reveal>
             <Reveal delay={100}>
-              <h1 className="mt-6 font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] text-balance text-charcoal">
-                Designing <em className="italic text-sage-deep">elegant</em> spaces that inspire living.
+              <h1 className="mt-6 display-title max-w-4xl text-balance">
+                Designing elegant spaces that inspire living.
               </h1>
             </Reveal>
             <Reveal delay={200}>
-              <p className="mt-8 max-w-lg text-muted-foreground leading-relaxed">
+              <p className="mt-8 max-w-lg text-cream/75 leading-relaxed">
                 Luxury residential, commercial & retail interiors crafted with creativity,
                 functionality and precision.
               </p>
             </Reveal>
             <Reveal delay={300}>
               <div className="mt-10 flex flex-wrap gap-4">
-                <Link to="/contact" className="group inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3.5 text-sm hover:bg-sage-deep transition-colors">
+                <Link to="/contact" className="group inline-flex items-center gap-2 rounded-sm bg-sage text-primary-foreground px-7 py-3.5 text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream hover:text-charcoal transition-colors">
                   Start a Project
                   <ArrowUpRight size={16} className="transition-transform group-hover:rotate-45" />
                 </Link>
-                <Link to="/projects" className="inline-flex items-center gap-2 rounded-full border border-charcoal/20 px-7 py-3.5 text-sm hover:border-charcoal transition-colors">
+                <Link to="/projects" className="inline-flex items-center gap-2 rounded-sm border border-cream/30 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-cream hover:border-cream transition-colors">
                   View Portfolio
                 </Link>
               </div>
             </Reveal>
           </div>
-
-          <div className="lg:col-span-6 relative">
-            <Reveal delay={150}>
-              <div className="relative">
-                <img
-                  src={heroLiving}
-                  alt="Luxury living room interior"
-                  width={1600}
-                  height={1200}
-                  className="w-full aspect-[5/4] object-cover rounded-sm shadow-2xl"
-                />
-                <div className="absolute -bottom-6 -left-6 bg-cream px-6 py-4 rounded-sm shadow-xl hidden md:block">
-                  <p className="font-serif text-3xl text-charcoal"><Counter to={12} /></p>
-                  <p className="text-xs tracking-widest uppercase text-muted-foreground">Years crafting</p>
-                </div>
-              </div>
-            </Reveal>
+          </div>
+          <div className="absolute bottom-7 right-7 hidden lg:flex items-center gap-3 bg-cream p-4 text-charcoal">
+            <div className="h-10 w-10 rounded-full bg-sage flex items-center justify-center"><Plus size={18} /></div>
+            <div><p className="text-xs font-bold uppercase tracking-[0.1em]">12+ years</p><p className="text-[0.65rem] text-muted-foreground">crafting meaningful spaces</p></div>
+          </div>
           </div>
         </div>
       </section>
@@ -139,7 +129,7 @@ function Home() {
       <section className="border-y border-border bg-cream overflow-hidden py-6">
         <div className="flex marquee-track whitespace-nowrap">
           {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex items-center gap-12 px-6 font-serif italic text-3xl md:text-4xl text-charcoal/70">
+            <div key={i} className="flex items-center gap-12 px-6 font-bold text-xl md:text-2xl uppercase tracking-[0.08em] text-charcoal/70">
               <span>Residential</span><span className="text-sage">✦</span>
               <span>Commercial</span><span className="text-sage">✦</span>
               <span>Retail</span><span className="text-sage">✦</span>
@@ -152,7 +142,7 @@ function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="relative py-28 lg:py-40">
+      <section className="relative py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 relative">
             <Reveal>
@@ -162,9 +152,9 @@ function Home() {
           </div>
           <div className="lg:col-span-6">
             <Reveal>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">About the Studio</p>
-              <h2 className="mt-5 font-serif text-4xl md:text-5xl lg:text-6xl text-balance">
-                We design spaces with <em className="italic text-sage-deep">soul</em>, built to last.
+              <p className="eyebrow text-sage-deep">About the Studio</p>
+              <h2 className="mt-5 display-title text-4xl md:text-6xl lg:text-7xl text-balance">
+                We design spaces with soul, built to last.
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
                 Infinite Space is a Bengaluru-based interior design and turnkey contracting
@@ -186,13 +176,13 @@ function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-cream py-28 lg:py-40">
+      <section className="bg-cream py-20 lg:py-28 section-band mx-4 md:mx-6">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <Reveal>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">What We Do</p>
-              <h2 className="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl max-w-2xl text-balance">
-                A full studio for every <em className="italic text-sage-deep">vision</em>.
+              <p className="eyebrow text-sage-deep">What We Do</p>
+              <h2 className="mt-4 display-title text-4xl md:text-6xl lg:text-7xl max-w-3xl text-balance">
+                A full studio for every vision.
               </h2>
             </Reveal>
             <Reveal delay={100}>
@@ -206,10 +196,10 @@ function Home() {
               <Reveal key={s.num}>
                 <div className="group bg-cream p-10 h-full hover:bg-background transition-colors cursor-pointer">
                   <div className="flex items-start justify-between">
-                    <span className="font-serif text-sage-deep text-lg">{s.num}</span>
+                   <span className="font-bold text-sage-deep text-sm">{s.num}</span>
                     <ArrowUpRight size={18} className="text-muted-foreground transition-transform group-hover:rotate-45 group-hover:text-sage-deep" />
                   </div>
-                  <h3 className="mt-12 font-serif text-2xl md:text-3xl">{s.title}</h3>
+                   <h3 className="mt-12 text-xl md:text-2xl font-extrabold uppercase">{s.title}</h3>
                   <p className="mt-4 text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </Reveal>
@@ -219,7 +209,7 @@ function Home() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="relative py-28 lg:py-40 bg-background">
+      <section className="relative py-20 lg:py-28 bg-background">
         <div className="absolute inset-y-0 right-0 w-2/3 bg-sage-soft -z-10" />
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
@@ -229,9 +219,9 @@ function Home() {
           </div>
           <div className="lg:col-span-6">
             <Reveal>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Why Choose Us</p>
-              <h2 className="mt-5 font-serif text-4xl md:text-5xl lg:text-6xl text-balance">
-                Considered design. <em className="italic text-sage-deep">Honest</em> craft.
+              <p className="eyebrow text-sage-deep">Why Choose Us</p>
+              <h2 className="mt-5 display-title text-4xl md:text-6xl lg:text-7xl text-balance">
+                Considered design. Honest craft.
               </h2>
               <div className="mt-10 space-y-6">
                 {[
@@ -242,7 +232,7 @@ function Home() {
                   <div key={t} className="flex gap-5">
                     <span className="h-px w-8 bg-sage-deep mt-3 shrink-0" />
                     <div>
-                      <h4 className="font-serif text-xl">{t}</h4>
+                      <h4 className="font-bold uppercase text-sm tracking-[0.08em]">{t}</h4>
                       <p className="text-muted-foreground text-sm mt-1">{d}</p>
                     </div>
                   </div>
@@ -254,7 +244,7 @@ function Home() {
       </section>
 
       {/* STATS */}
-      <section className="bg-charcoal text-cream py-24">
+      <section className="bg-charcoal text-cream py-20 section-band mx-4 md:mx-6">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
             [20, "+", "Years of experience"],
@@ -263,21 +253,21 @@ function Home() {
             [40, "+", "Awards & features"],
           ].map(([n, s, label]) => (
             <Reveal key={label as string}>
-              <p className="font-serif text-5xl md:text-6xl text-sage"><Counter to={n as number} suffix={s as string} /></p>
-              <p className="mt-3 text-xs tracking-[0.25em] uppercase text-cream/60">{label}</p>
+             <p className="text-5xl md:text-6xl font-extrabold text-sage"><Counter to={n as number} suffix={s as string} /></p>
+             <p className="mt-3 eyebrow text-cream/60">{label}</p>
             </Reveal>
           ))}
         </div>
       </section>
 
       {/* PROJECTS MASONRY */}
-      <section className="py-28 lg:py-40">
+      <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <Reveal>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Selected Work</p>
-              <h2 className="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl">
-                Showcase of <em className="italic text-sage-deep">our projects</em>.
+              <p className="eyebrow text-sage-deep">Selected Work</p>
+              <h2 className="mt-4 display-title text-4xl md:text-6xl lg:text-7xl">
+                Showcase of our projects.
               </h2>
             </Reveal>
             <Reveal delay={100}>
@@ -302,16 +292,16 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-cream py-28 lg:py-40 relative overflow-hidden">
+      <section className="bg-cream py-20 lg:py-28 relative overflow-hidden section-band mx-4 md:mx-6">
         <div className="absolute top-10 left-10 font-serif text-[12rem] leading-none text-sage/30 select-none">"</div>
         <div className="mx-auto max-w-4xl px-6 text-center relative">
           <Reveal>
-            <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Kind Words</p>
-            <h2 className="mt-4 font-serif text-4xl md:text-5xl">From the people who live in them.</h2>
+             <p className="eyebrow text-sage-deep">Kind Words</p>
+             <h2 className="mt-4 display-title text-4xl md:text-6xl">From the people who live in them.</h2>
           </Reveal>
           <div className="mt-16 min-h-[200px]">
             <Reveal key={active}>
-              <p className="font-serif text-2xl md:text-3xl italic text-charcoal/90 leading-snug text-balance">
+               <p className="font-serif text-2xl md:text-3xl text-charcoal/90 leading-snug text-balance">
                 "{testimonials[active].quote}"
               </p>
               <p className="mt-8 font-serif text-lg">{testimonials[active].name}</p>
@@ -332,20 +322,20 @@ function Home() {
       </section>
 
       {/* PROCESS */}
-      <section className="py-28 lg:py-40">
+      <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">How We Work</p>
-            <h2 className="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl max-w-3xl">
-              A clear path from <em className="italic text-sage-deep">vision</em> to keys-in-hand.
+             <p className="eyebrow text-sage-deep">How We Work</p>
+             <h2 className="mt-4 display-title text-4xl md:text-6xl lg:text-7xl max-w-4xl">
+               A clear path from vision to keys-in-hand.
             </h2>
           </Reveal>
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-5 gap-px bg-border">
             {process.map((p) => (
               <Reveal key={p.n}>
                 <div className="bg-background p-8 h-full">
-                  <p className="font-serif text-sage-deep text-2xl">{p.n}</p>
-                  <h4 className="mt-8 font-serif text-xl">{p.t}</h4>
+                   <p className="font-bold text-sage-deep text-sm">{p.n}</p>
+                   <h4 className="mt-8 font-bold uppercase text-sm tracking-[0.1em]">{p.t}</h4>
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
                 </div>
               </Reveal>
@@ -355,15 +345,15 @@ function Home() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="relative py-24 bg-sage">
+      <section className="relative py-20 bg-sage section-band mx-4 md:mx-6 mb-8">
         <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <Reveal>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal text-balance max-w-2xl">
-              Have a space in mind? Let's <em className="italic">begin</em>.
+             <h2 className="display-title text-4xl md:text-6xl lg:text-7xl text-charcoal text-balance max-w-3xl">
+               Have a space in mind? Let's begin.
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-charcoal text-cream px-8 py-4 hover:bg-sage-deep transition-colors">
+             <Link to="/contact" className="inline-flex items-center gap-3 rounded-sm bg-charcoal text-cream px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] hover:bg-sage-deep transition-colors">
               Start your project <ArrowUpRight size={18} />
             </Link>
           </Reveal>

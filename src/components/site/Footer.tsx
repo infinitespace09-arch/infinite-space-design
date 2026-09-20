@@ -8,15 +8,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-20 pb-10">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-2 bg-cream rounded-lg p-3 w-fit">
-              <img src={logo} alt="Infinite Space Interiors" className="h-12 w-auto" />
+             <div className="flex items-center gap-2 bg-cream rounded-sm p-3 w-fit">
+               <img src={logo} alt="Infinite Space Interiors" className="h-11 w-auto" />
             </div>
             <p className="mt-6 max-w-md text-cream/70 leading-relaxed">
               Designing elegant spaces that inspire living. Luxury residential,
               commercial & retail interiors crafted with creativity, functionality
               and precision.
             </p>
-            <p className="mt-6 font-serif italic text-sage text-lg">
+             <p className="mt-6 font-bold uppercase tracking-[0.12em] text-sage text-xs">
               Design • Build • Transform
             </p>
           </div>
