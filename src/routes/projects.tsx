@@ -18,6 +18,8 @@ export const Route = createFileRoute("/projects")({
       { property: "og:title", content: "Projects Gallery — Infinite Space" },
       { property: "og:description", content: "Selected work from our studio." },
       { property: "og:image", content: heroLiving },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Projects,
@@ -41,12 +43,12 @@ function Projects() {
 
   return (
     <div>
-      <section className="pt-40 pb-12">
+       <section className="pt-32 pb-12 lg:pt-40">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Projects Gallery</p>
-            <h1 className="mt-6 font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.02] max-w-5xl text-balance">
-              Spaces we've <em className="italic text-sage-deep">brought to life</em>.
+             <p className="eyebrow text-sage-deep">Projects Gallery</p>
+             <h1 className="mt-6 display-title text-5xl md:text-7xl lg:text-8xl max-w-5xl text-balance">
+               Spaces we've brought to life.
             </h1>
           </Reveal>
           <Reveal delay={100}>
@@ -55,7 +57,7 @@ function Projects() {
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`px-5 py-2 rounded-full text-sm border transition-colors ${
+                   className={`px-5 py-2 rounded-sm text-xs font-bold uppercase tracking-[0.1em] border transition-colors ${
                     filter === f
                       ? "bg-charcoal text-cream border-charcoal"
                       : "border-border text-muted-foreground hover:border-charcoal hover:text-charcoal"
@@ -69,7 +71,7 @@ function Projects() {
         </div>
       </section>
 
-      <section className="pb-32">
+       <section className="pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {shown.map((p, i) => (
             <Reveal key={p.t + i} delay={i * 50}>
@@ -78,7 +80,7 @@ function Projects() {
                   <img src={p.img} alt={p.t} loading="lazy" className={`w-full object-cover ${i % 5 === 0 ? "aspect-[16/10]" : "aspect-[4/5]"}`} />
                 </div>
                 <div className="mt-4 flex items-baseline justify-between">
-                  <h3 className="font-serif text-2xl">{p.t}</h3>
+                   <h3 className="font-bold uppercase text-lg">{p.t}</h3>
                   <p className="text-xs tracking-widest uppercase text-muted-foreground">{p.loc}</p>
                 </div>
                 <p className="text-sm text-sage-deep mt-1">{p.c}</p>

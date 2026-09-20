@@ -11,6 +11,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Start a project, visit our studio, or simply say hello." },
       { property: "og:title", content: "Contact Infinite Space" },
       { property: "og:description", content: "Start a project with our studio." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Contact,
@@ -31,13 +33,13 @@ function Contact() {
 
   return (
     <div>
-      <section className="pt-40 pb-20">
+       <section className="pt-32 pb-20 lg:pt-40">
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Get in Touch</p>
-              <h1 className="mt-6 font-serif text-5xl md:text-7xl leading-[1.02] text-balance">
-                Let's design something <em className="italic text-sage-deep">remarkable</em>.
+               <p className="eyebrow text-sage-deep">Get in Touch</p>
+               <h1 className="mt-6 display-title text-5xl md:text-7xl text-balance">
+                 Let's design something remarkable.
               </h1>
               <p className="mt-6 text-muted-foreground max-w-lg leading-relaxed">
                 Tell us a little about your space, your timeline and what you're hoping for.
@@ -67,16 +69,16 @@ function Contact() {
 
           <aside className="lg:col-span-5 lg:pl-8">
             <Reveal delay={200}>
-              <div className="bg-cream rounded-sm p-10">
-                <h3 className="font-serif text-2xl">Studio</h3>
+               <div className="bg-cream rounded-sm p-8 md:p-10 section-band">
+                 <h3 className="font-bold uppercase text-sm tracking-[0.1em]">Studio</h3>
                 <ul className="mt-6 space-y-5 text-sm">
                   <li className="flex gap-4"><MapPin className="text-sage-deep shrink-0 mt-0.5" size={18} /> 12, Design District, Indiranagar, Bengaluru 560038, India</li>
                   <li className="flex gap-4"><Phone className="text-sage-deep shrink-0 mt-0.5" size={18} /> +91 98765 43210</li>
                   <li className="flex gap-4"><Mail className="text-sage-deep shrink-0 mt-0.5" size={18} /> hello@infinitespace.studio</li>
                 </ul>
                 <div className="mt-8 pt-8 border-t border-border">
-                  <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground">Studio Hours</p>
-                  <p className="mt-3 font-serif text-lg">Mon — Sat · 10am — 7pm</p>
+                   <p className="eyebrow text-muted-foreground">Studio Hours</p>
+                   <p className="mt-3 font-bold uppercase text-sm tracking-[0.08em]">Mon — Sat · 10am — 7pm</p>
                 </div>
               </div>
             </Reveal>

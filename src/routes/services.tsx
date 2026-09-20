@@ -17,6 +17,8 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Our Services — Infinite Space" },
       { property: "og:description", content: "End-to-end interior design and turnkey contracting." },
       { property: "og:image", content: projKitchen },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Services,
@@ -37,24 +39,24 @@ const items = [
 function Services() {
   return (
     <div>
-      <section className="pt-40 pb-20">
+       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Services</p>
-            <h1 className="mt-6 font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.02] text-balance max-w-5xl">
-              One studio. <em className="italic text-sage-deep">Every</em> discipline of interior.
+             <p className="eyebrow text-sage-deep">Services</p>
+             <h1 className="mt-6 display-title text-5xl md:text-7xl lg:text-8xl text-balance max-w-5xl">
+               One studio. Every discipline of interior.
             </h1>
           </Reveal>
         </div>
       </section>
 
-      <section className="pb-32">
+       <section className="pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 space-y-2">
           {items.map((s, i) => (
             <Reveal key={s.t}>
               <div className="group grid md:grid-cols-12 gap-8 items-center border-t border-border py-10 hover:bg-cream/60 transition-colors -mx-6 px-6">
-                <p className="md:col-span-1 font-serif text-sage-deep">{String(i + 1).padStart(2, "0")}</p>
-                <h3 className="md:col-span-4 font-serif text-3xl md:text-4xl">{s.t}</h3>
+                 <p className="md:col-span-1 font-bold text-sage-deep text-sm">{String(i + 1).padStart(2, "0")}</p>
+                 <h3 className="md:col-span-4 font-bold uppercase text-xl md:text-2xl">{s.t}</h3>
                 <p className="md:col-span-4 text-muted-foreground text-sm leading-relaxed">{s.d}</p>
                 <div className="md:col-span-3 overflow-hidden rounded-sm hover-zoom">
                   <img src={s.img} alt={s.t} loading="lazy" className="w-full aspect-[4/3] object-cover" />
@@ -65,12 +67,12 @@ function Services() {
         </div>
       </section>
 
-      <section className="bg-sage py-24">
+       <section className="bg-sage py-20 section-band mx-4 md:mx-6 mb-8">
         <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal text-balance max-w-2xl">
-            Tell us about your <em className="italic">space</em>.
+           <h2 className="display-title text-4xl md:text-6xl lg:text-7xl text-charcoal text-balance max-w-3xl">
+             Tell us about your space.
           </h2>
-          <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-charcoal text-cream px-8 py-4 hover:bg-sage-deep">
+           <Link to="/contact" className="inline-flex items-center gap-3 rounded-sm bg-charcoal text-cream px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] hover:bg-sage-deep">
             Request a consultation <ArrowUpRight size={18} />
           </Link>
         </div>
