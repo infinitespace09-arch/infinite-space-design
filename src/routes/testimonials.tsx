@@ -9,6 +9,8 @@ export const Route = createFileRoute("/testimonials")({
       { name: "description", content: "What our clients say about working with Infinite Space Interiors." },
       { property: "og:title", content: "Testimonials — Infinite Space" },
       { property: "og:description", content: "Words from the people who live in the spaces we design." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Testimonials,
@@ -26,29 +28,29 @@ const list = [
 function Testimonials() {
   return (
     <div>
-      <section className="pt-40 pb-20">
+       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <p className="text-xs tracking-[0.3em] uppercase text-sage-deep">Testimonials</p>
-            <h1 className="mt-6 font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.02] max-w-5xl text-balance">
-              The best brief we receive is a <em className="italic text-sage-deep">kind word</em>.
+             <p className="eyebrow text-sage-deep">Testimonials</p>
+             <h1 className="mt-6 display-title text-5xl md:text-7xl lg:text-8xl max-w-5xl text-balance">
+               The best brief we receive is a kind word.
             </h1>
           </Reveal>
         </div>
       </section>
 
-      <section className="pb-32">
+       <section className="pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {list.map((t, i) => (
             <Reveal key={t.n} delay={i * 60}>
-              <article className="bg-cream p-10 h-full rounded-sm flex flex-col">
+               <article className="bg-cream p-8 md:p-10 h-full rounded-sm flex flex-col section-band">
                 <Quote className="text-sage-deep" />
-                <p className="mt-6 font-serif text-xl leading-snug text-balance flex-1">"{t.q}"</p>
+                 <p className="mt-6 text-xl font-semibold leading-snug text-balance flex-1">"{t.q}"</p>
                 <div className="mt-8 pt-6 border-t border-border">
                   <div className="flex gap-0.5 text-sage-deep">
                     {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                   </div>
-                  <p className="mt-3 font-serif text-lg">{t.n}</p>
+                   <p className="mt-3 font-bold uppercase text-sm tracking-[0.08em]">{t.n}</p>
                   <p className="text-sm text-muted-foreground">{t.r}</p>
                 </div>
               </article>
