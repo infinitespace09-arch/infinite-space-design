@@ -94,8 +94,9 @@
 @utility font-serif { font-family: var(--font-serif); }
 @utility text-balance { text-wrap: balance; }
 
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal { opacity: 1; transform: none; }
+.reveal.in { animation: reveal-rise .7s ease both; }
+@keyframes reveal-rise { from { opacity: .65; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 .hover-zoom img { transition: transform .6s ease; }
 .hover-zoom:hover img { transform: scale(1.045); }
