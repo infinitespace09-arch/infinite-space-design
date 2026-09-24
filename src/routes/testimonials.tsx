@@ -28,10 +28,10 @@ const list = [
 function Testimonials() {
   return (
     <div>
-       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
+       <section className="bg-charcoal text-cream pt-32 pb-16 lg:pt-40 lg:pb-20 section-wave section-wave-blush">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-             <p className="eyebrow text-sage-deep">Testimonials</p>
+             <p className="eyebrow text-cream/70">Testimonials</p>
              <h1 className="mt-6 display-title text-5xl md:text-7xl lg:text-8xl max-w-5xl text-balance">
                The best brief we receive is a kind word.
             </h1>
@@ -39,11 +39,11 @@ function Testimonials() {
         </div>
       </section>
 
-       <section className="pb-20 lg:pb-32">
+       <section className="bg-sage-soft pt-16 pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {list.map((t, i) => (
             <Reveal key={t.n} delay={i * 60}>
-               <article className="bg-cream p-8 md:p-10 h-full rounded-sm flex flex-col section-band">
+               <article className="bg-card p-8 md:p-10 h-full rounded-sm flex flex-col border border-border">
                 <Quote className="text-sage-deep" />
                  <p className="mt-6 text-xl font-semibold leading-snug text-balance flex-1">"{t.q}"</p>
                 <div className="mt-8 pt-6 border-t border-border">

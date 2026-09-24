@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Plus, Home as HomeIcon, Building2, Store, CookingPot, PanelsTopLeft, Hammer, Quote } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Home as HomeIcon, Building2, Store, CookingPot, PanelsTopLeft, Hammer, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { useEffect, useState } from "react";
@@ -78,7 +78,7 @@ function Home() {
   const shownProjects = Array.from({ length: 3 }, (_, i) => projects[(projectIndex + i) % projects.length]);
 
   return <div className="overflow-hidden">
-    <section className="relative min-h-[680px] lg:min-h-[700px] h-[88svh] max-h-[920px] bg-charcoal text-cream section-wave section-wave-light">
+    <section className="relative min-h-[560px] lg:min-h-[700px] h-[82svh] lg:h-[88svh] max-h-[920px] bg-charcoal text-cream section-wave section-wave-light">
       <img src={heroLiving} alt="Elegant living room designed by Infinite Space Interiors" className="absolute inset-0 w-full h-full object-cover object-center opacity-65" />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/65 to-charcoal/20" />
       <div className="relative z-10 mx-auto max-w-7xl h-full px-6 pt-32 pb-20 flex flex-col justify-center">

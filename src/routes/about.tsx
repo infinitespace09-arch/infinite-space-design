@@ -4,6 +4,7 @@ import aboutDining from "@/assets/about-dining.jpg";
 import projBath from "@/assets/proj-bath.jpg";
 import projOffice from "@/assets/proj-office.jpg";
 import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -12,7 +13,6 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "A decade of designing elegant, considered interiors across India." },
       { property: "og:title", content: "About — Infinite Space" },
       { property: "og:description", content: "Our story, philosophy and craft." },
-      { property: "og:image", content: aboutDining },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -24,8 +24,7 @@ function About() {
   return (
     <div>
       {/* HERO */}
-      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20">
-        <div className="absolute top-32 right-0 w-1/2 h-2/3 bg-sage-soft -z-10" />
+      <section className="relative bg-sage-soft pt-32 pb-16 lg:pt-40 lg:pb-20 section-wave section-wave-light">
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-7">
             <Reveal>
@@ -56,11 +55,11 @@ function About() {
       </section>
 
       {/* PHILOSOPHY */}
-      <section className="bg-cream py-20 lg:py-28 section-band mx-4 md:mx-6">
+      <section className="bg-charcoal text-cream py-20 lg:py-28 section-wave section-wave-light">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <Reveal>
             <p className="eyebrow text-sage-deep">Philosophy</p>
-            <h2 className="mt-6 display-title text-4xl md:text-6xl text-balance">
+               <h2 className="mt-6 font-serif text-4xl md:text-6xl uppercase font-extrabold leading-none text-balance">
               "Design disappears when it works.
               What remains is the way a space makes you feel."
             </h2>
@@ -69,7 +68,7 @@ function About() {
       </section>
 
       {/* VALUES */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-sage-soft section-wave section-wave-light">
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {[
             ["Restraint", "We edit relentlessly. Every element earns its place."],
@@ -78,8 +77,8 @@ function About() {
             ["Care", "From first call to handover, you work with one team."],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 80}>
-              <p className="font-bold text-sage-deep text-sm">0{i + 1}</p>
-              <h3 className="mt-6 font-bold uppercase text-sm tracking-[0.1em]">{t}</h3>
+               <p className="font-serif font-extrabold text-sage-deep text-3xl">0{i + 1}</p>
+               <h3 className="mt-6 font-bold uppercase text-2xl">{t}</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{d}</p>
             </Reveal>
           ))}
@@ -107,9 +106,7 @@ function About() {
                 Founded in 2013, Infinite Space remains family-led — which is why every project
                 gets senior attention and our own carpenters' hands.
               </p>
-               <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-sm bg-charcoal text-cream px-7 py-3.5 text-xs font-bold uppercase tracking-[0.12em] hover:bg-sage-deep">
-                Visit our studio <ArrowUpRight size={16} />
-              </Link>
+               <Button asChild className="mt-8 rounded-sm bg-sage-deep text-primary-foreground hover:bg-charcoal text-xs font-bold uppercase"><Link to="/contact">Visit our studio <ArrowUpRight size={16} /></Link></Button>
             </Reveal>
           </div>
         </div>

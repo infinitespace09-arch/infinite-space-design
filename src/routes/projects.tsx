@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import projKitchen from "@/assets/proj-kitchen.jpg";
 import projBedroom from "@/assets/proj-bedroom.jpg";
 import projBath from "@/assets/proj-bath.jpg";
@@ -17,7 +18,6 @@ export const Route = createFileRoute("/projects")({
       { name: "description", content: "A selected gallery of residential, commercial and retail interiors." },
       { property: "og:title", content: "Projects Gallery — Infinite Space" },
       { property: "og:description", content: "Selected work from our studio." },
-      { property: "og:image", content: heroLiving },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -43,7 +43,7 @@ function Projects() {
 
   return (
     <div>
-       <section className="pt-32 pb-12 lg:pt-40">
+       <section className="bg-sage-soft pt-32 pb-12 lg:pt-40 section-wave section-wave-light">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
              <p className="eyebrow text-sage-deep">Projects Gallery</p>
@@ -53,25 +53,27 @@ function Projects() {
           </Reveal>
           <Reveal delay={100}>
             <div className="mt-12 flex flex-wrap gap-2">
-              {filters.map((f) => (
-                <button
+               {filters.map((f) => (
+                 <Button
                   key={f}
                   onClick={() => setFilter(f)}
-                   className={`px-5 py-2 rounded-sm text-xs font-bold uppercase tracking-[0.1em] border transition-colors ${
+                    variant="outline"
+                    aria-pressed={filter === f}
+                    className={`px-5 py-2 rounded-sm text-xs font-bold uppercase border transition-colors ${
                     filter === f
-                      ? "bg-charcoal text-cream border-charcoal"
-                      : "border-border text-muted-foreground hover:border-charcoal hover:text-charcoal"
+                       ? "bg-sage-deep text-primary-foreground border-sage-deep hover:bg-sage"
+                       : "bg-card border-border text-muted-foreground hover:border-sage-deep hover:text-sage-deep"
                   }`}
                 >
                   {f}
-                </button>
+                 </Button>
               ))}
             </div>
           </Reveal>
         </div>
       </section>
 
-       <section className="pb-20 lg:pb-32">
+       <section className="pt-12 pb-20 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {shown.map((p, i) => (
             <Reveal key={p.t + i} delay={i * 50}>
