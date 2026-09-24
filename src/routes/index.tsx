@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Plus, Home as HomeIcon, Building2, Store, CookingPot, PanelsTopLeft, Hammer, Quote } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Home as HomeIcon, Building2, Store, CookingPot, PanelsTopLeft, Hammer, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { useEffect, useState } from "react";

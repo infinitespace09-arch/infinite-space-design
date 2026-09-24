@@ -1,3 +1,3 @@
-- [ ] Match the reference homepage composition and palette with existing content.
-- [ ] Align navigation, inner pages, and footer to the same visual language.
-- [ ] Check desktop/mobile rendering, interactions, and page metadata.
+- [x] Match the reference homepage composition and palette with existing content.
+- [x] Align navigation, inner pages, and footer to the same visual language.
+- [x] Check desktop/mobile rendering, interactions, and page metadata.
