@@ -3,6 +3,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -33,7 +34,7 @@ function Contact() {
 
   return (
     <div>
-       <section className="pt-32 pb-20 lg:pt-40">
+       <section className="bg-sage-soft pt-32 pb-20 lg:pt-40">
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7">
             <Reveal>
@@ -56,20 +57,20 @@ function Contact() {
                 <div className="sm:col-span-2">
                   <Field label="Tell us about your space" name="message" textarea required />
                 </div>
-                <button
+                 <Button
                   type="submit"
                   disabled={sending}
-                  className="sm:col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-charcoal text-cream px-8 py-4 hover:bg-sage-deep disabled:opacity-60 transition-colors"
+                   className="sm:col-span-2 mt-2 h-12 rounded-sm bg-sage-deep text-primary-foreground px-8 hover:bg-charcoal disabled:opacity-60 text-xs uppercase font-extrabold"
                 >
                   {sending ? "Sending…" : "Send Inquiry"} <Send size={16} />
-                </button>
+                 </Button>
               </form>
             </Reveal>
           </div>
 
           <aside className="lg:col-span-5 lg:pl-8">
             <Reveal delay={200}>
-               <div className="bg-cream rounded-sm p-8 md:p-10 section-band">
+               <div className="bg-card rounded-sm p-8 md:p-10 border border-border">
                  <h3 className="font-bold uppercase text-sm tracking-[0.1em]">Studio</h3>
                 <ul className="mt-6 space-y-5 text-sm">
                   <li className="flex gap-4"><MapPin className="text-sage-deep shrink-0 mt-0.5" size={18} /> 12, Design District, Indiranagar, Bengaluru 560038, India</li>

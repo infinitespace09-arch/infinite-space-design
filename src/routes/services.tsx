@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import projKitchen from "@/assets/proj-kitchen.jpg";
 import projBedroom from "@/assets/proj-bedroom.jpg";
 import projBath from "@/assets/proj-bath.jpg";
@@ -16,7 +17,6 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Residential, commercial, retail, turnkey, modular kitchens, wardrobes, carpentry and more." },
       { property: "og:title", content: "Our Services — Infinite Space" },
       { property: "og:description", content: "End-to-end interior design and turnkey contracting." },
-      { property: "og:image", content: projKitchen },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -39,7 +39,7 @@ const items = [
 function Services() {
   return (
     <div>
-       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
+       <section className="bg-sage-soft pt-32 pb-16 lg:pt-40 lg:pb-20 section-wave section-wave-light">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
              <p className="eyebrow text-sage-deep">Services</p>
@@ -50,31 +50,25 @@ function Services() {
         </div>
       </section>
 
-       <section className="pb-20 lg:pb-32">
-        <div className="mx-auto max-w-7xl px-6 space-y-2">
+       <section className="py-20 lg:py-28">
+         <div className="mx-auto max-w-7xl px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {items.map((s, i) => (
             <Reveal key={s.t}>
-              <div className="group grid md:grid-cols-12 gap-8 items-center border-t border-border py-10 hover:bg-cream/60 transition-colors -mx-6 px-6">
-                 <p className="md:col-span-1 font-bold text-sage-deep text-sm">{String(i + 1).padStart(2, "0")}</p>
-                 <h3 className="md:col-span-4 font-bold uppercase text-xl md:text-2xl">{s.t}</h3>
-                <p className="md:col-span-4 text-muted-foreground text-sm leading-relaxed">{s.d}</p>
-                <div className="md:col-span-3 overflow-hidden rounded-sm hover-zoom">
-                  <img src={s.img} alt={s.t} loading="lazy" className="w-full aspect-[4/3] object-cover" />
-                </div>
-              </div>
+               <article className="group h-full border border-border bg-card rounded-sm overflow-hidden hover:border-sage transition-colors">
+                 <div className="overflow-hidden hover-zoom"><img src={s.img} alt={s.t} loading="lazy" className="w-full aspect-[4/3] object-cover" /></div>
+                 <div className="p-6"><p className="font-serif font-extrabold text-sage-deep text-2xl">{String(i + 1).padStart(2, "0")}</p><h3 className="mt-3 uppercase text-2xl">{s.t}</h3><p className="mt-3 text-muted-foreground text-sm leading-relaxed">{s.d}</p></div>
+               </article>
             </Reveal>
           ))}
         </div>
       </section>
 
-       <section className="bg-sage py-20 section-band mx-4 md:mx-6 mb-8">
+       <section className="bg-charcoal py-20 text-cream">
         <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-           <h2 className="display-title text-4xl md:text-6xl lg:text-7xl text-charcoal text-balance max-w-3xl">
+           <h2 className="display-title text-4xl md:text-6xl lg:text-7xl text-balance max-w-3xl">
              Tell us about your space.
           </h2>
-           <Link to="/contact" className="inline-flex items-center gap-3 rounded-sm bg-charcoal text-cream px-8 py-4 text-xs font-bold uppercase tracking-[0.12em] hover:bg-sage-deep">
-            Request a consultation <ArrowUpRight size={18} />
-          </Link>
+           <Button asChild className="rounded-sm bg-sage text-primary-foreground hover:bg-cream hover:text-charcoal text-xs font-bold uppercase"><Link to="/contact">Request a consultation <ArrowUpRight size={18} /></Link></Button>
         </div>
       </section>
     </div>

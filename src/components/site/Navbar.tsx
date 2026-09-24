@@ -19,7 +19,7 @@ export function Navbar() {
     <header className="fixed top-3 inset-x-3 md:top-5 md:inset-x-6 z-50 mx-auto max-w-[1500px] bg-card text-card-foreground shadow-md rounded-sm">
       <div className="flex h-16 md:h-[72px] items-center justify-between gap-4 px-4 md:px-7">
         <Link to="/" aria-label="Infinite Space Interiors home" className="shrink-0 flex items-center">
-          <img src={logo} alt="Infinite Space Interiors" className="w-[142px] md:w-[185px] h-auto" />
+          <img src={logo} alt="Infinite Space Interiors" className="w-[125px] md:w-[145px] h-auto" />
         </Link>
         <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-5 xl:gap-8">
           {links.map((l) => (
