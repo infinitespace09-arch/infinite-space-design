@@ -16,15 +16,6 @@ export const Route = createFileRoute("/testimonials")({
   component: Testimonials,
 });
 
-const list = [
-  { n: "Aarav & Meera Kapoor", r: "Homeowners, Bengaluru", q: "They translated a vague feeling into a home we never want to leave. Every corner has intent and warmth." },
-  { n: "Studio Aera", r: "Boutique Owner", q: "Our footfall doubled in the first quarter. The space tells our brand story without saying a word." },
-  { n: "Rohan Mehta", r: "Founder, Northwind", q: "Calm, precise, on time. Working with Infinite Space felt less like a project and more like a partnership." },
-  { n: "Nikhil & Anjali", r: "Penthouse, Mumbai", q: "Detail. Detail. Detail. The carpentry alone is worth every rupee." },
-  { n: "Ira Designs", r: "Retail Chain", q: "Three stores delivered on the same opening week. Flawlessly." },
-  { n: "Dr. Kavya N.", r: "Clinic Owner", q: "Patients comment on the calm of the space before they meet me. That's design doing its job." },
-];
-
 function Testimonials() {
   return (
     <div>
@@ -40,22 +31,14 @@ function Testimonials() {
       </section>
 
        <section className="bg-sage-soft pt-16 pb-20 lg:pb-32">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {list.map((t, i) => (
-            <Reveal key={t.n} delay={i * 60}>
-               <article className="bg-card p-8 md:p-10 h-full rounded-sm flex flex-col border border-border">
-                <Quote className="text-sage-deep" />
-                 <p className="mt-6 text-xl font-semibold leading-snug text-balance flex-1">"{t.q}"</p>
-                <div className="mt-8 pt-6 border-t border-border">
-                  <div className="flex gap-0.5 text-sage-deep">
-                    {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                  </div>
-                   <p className="mt-3 font-bold uppercase text-sm tracking-[0.08em]">{t.n}</p>
-                  <p className="text-sm text-muted-foreground">{t.r}</p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+           <div className="mx-auto max-w-7xl px-6">
+             <Reveal>
+               <article className="bg-card p-8 md:p-10 rounded-sm border border-border max-w-2xl">
+                 <Quote className="text-sage-deep" />
+                 <p className="mt-6 text-xl font-semibold leading-snug">Client testimonials</p>
+                 <p className="mt-3 text-sm text-muted-foreground">Approved client feedback will be shared here.</p>
+               </article>
+             </Reveal>
         </div>
       </section>
     </div>
