@@ -91,8 +91,8 @@ function Home() {
           </div>
         </div>
         <div className="hidden lg:block absolute right-6 xl:right-0 bottom-28 w-[250px] bg-card text-card-foreground p-3 shadow-xl rounded-sm rotate-[2deg]">
-          <img src={projKitchen} alt="Verdant Kitchen project" className="w-full h-36 object-cover" />
-          <div className="flex items-center justify-between pt-3"><div><p className="text-[10px] font-bold uppercase text-muted-foreground">Selected Project</p><p className="font-serif font-bold uppercase text-xl">Verdant Kitchen</p></div><ArrowUpRight size={18} className="text-sage-deep"/></div>
+           <img src={projKitchen} alt="Residential interior project" className="w-full h-36 object-cover" />
+           <div className="flex items-center justify-between pt-3"><div><p className="text-[10px] font-bold uppercase text-muted-foreground">Selected Work</p><p className="font-serif font-bold uppercase text-xl">Residential Interiors</p></div><ArrowUpRight size={18} className="text-sage-deep"/></div>
         </div>
         <div className="absolute bottom-9 left-6 right-6 mx-auto max-w-7xl hidden md:flex items-center gap-3 text-xs font-bold uppercase text-cream/70"><span className="h-px w-10 bg-sage"/>Interior Design & Turnkey Contracting</div>
       </div>

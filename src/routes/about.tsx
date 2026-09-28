@@ -97,7 +97,7 @@ function About() {
           </div>
           <div className="lg:col-span-5">
             <Reveal>
-               <p className="eyebrow text-sage-deep">Family Run</p>
+               <p className="eyebrow text-sage-deep">About Infinite Space</p>
                <h2 className="mt-5 display-title text-4xl md:text-6xl text-balance">
                   Complete interiors, thoughtfully executed.
               </h2>
