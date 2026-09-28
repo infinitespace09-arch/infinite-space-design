@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Infinite Space Interiors" },
-      { name: "description", content: "Start a project, visit our studio, or simply say hello." },
+      { name: "description", content: "Contact Infinite Space Interiors for premium interior design and turnkey contracting in Mumbai." },
       { property: "og:title", content: "Contact Infinite Space" },
       { property: "og:description", content: "Start a project with our studio." },
       { property: "og:type", content: "website" },
@@ -43,8 +43,7 @@ function Contact() {
                  Let's design something remarkable.
               </h1>
               <p className="mt-6 text-muted-foreground max-w-lg leading-relaxed">
-                Tell us a little about your space, your timeline and what you're hoping for.
-                We respond personally within one working day.
+                 Tell us about your interior project and we will be in touch.
               </p>
             </Reveal>
 
@@ -73,14 +72,10 @@ function Contact() {
                <div className="bg-card rounded-sm p-8 md:p-10 border border-border">
                  <h3 className="font-bold uppercase text-sm tracking-[0.1em]">Studio</h3>
                 <ul className="mt-6 space-y-5 text-sm">
-                  <li className="flex gap-4"><MapPin className="text-sage-deep shrink-0 mt-0.5" size={18} /> 12, Design District, Indiranagar, Bengaluru 560038, India</li>
-                  <li className="flex gap-4"><Phone className="text-sage-deep shrink-0 mt-0.5" size={18} /> +91 98765 43210</li>
-                  <li className="flex gap-4"><Mail className="text-sage-deep shrink-0 mt-0.5" size={18} /> hello@infinitespace.studio</li>
+                  <li className="flex gap-4"><MapPin className="text-sage-deep shrink-0 mt-0.5" size={18} /> Shop-3, Floor-GRD, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Elphinstone Rly Stn (W), Delisle Road, Mumbai – 400013</li>
+                  <li className="flex gap-4"><Phone className="text-sage-deep shrink-0 mt-0.5" size={18} /> <span>+91 9324029464<br />+91 9820012617</span></li>
+                  <li className="flex gap-4"><Mail className="text-sage-deep shrink-0 mt-0.5" size={18} /> infinitespace09@gmail.com</li>
                 </ul>
-                <div className="mt-8 pt-8 border-t border-border">
-                   <p className="eyebrow text-muted-foreground">Studio Hours</p>
-                   <p className="mt-3 font-bold uppercase text-sm tracking-[0.08em]">Mon — Sat · 10am — 7pm</p>
-                </div>
               </div>
             </Reveal>
           </aside>

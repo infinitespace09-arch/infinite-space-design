@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
-import { Quote, Star } from "lucide-react";
+import { Quote } from "lucide-react";
 
 export const Route = createFileRoute("/testimonials")({
   head: () => ({

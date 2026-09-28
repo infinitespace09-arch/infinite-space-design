@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Mail, Phone, ArrowUpRight } from "lucide-react";
 import logo from "@/assets/logo-trim.webp";
 
 export function Footer() {
@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <div className="bg-card rounded-sm w-fit p-2"><img src={logo} alt="Infinite Space Interiors" className="w-[190px] h-auto" /></div>
-            <p className="mt-6 max-w-xs text-sm text-cream/65 leading-relaxed">Designing elegant spaces that inspire living. Luxury residential, commercial & retail interiors crafted with creativity, functionality and precision.</p>
+            <p className="mt-6 max-w-xs text-sm text-cream/65 leading-relaxed">Premium interior design and turnkey contracting, combining thoughtful design, quality craftsmanship and detailed project execution.</p>
             <p className="mt-5 text-xs font-extrabold uppercase text-sage">Design • Build • Transform</p>
           </div>
           <div className="md:col-span-2">
@@ -19,15 +19,15 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:col-span-3">
-            <h4 className="text-xl uppercase">Working Hours</h4>
-            <dl className="mt-5 text-sm text-cream/70 space-y-3"><div className="flex justify-between gap-5"><dt>Mon — Sat</dt><dd>10am — 7pm</dd></div><div className="flex justify-between gap-5"><dt>Sun</dt><dd>Closed</dd></div></dl>
+            <h4 className="text-xl uppercase">Workshop</h4>
+            <p className="mt-5 text-sm text-cream/70 leading-relaxed">Shop-3, Floor-GRD, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Elphinstone Rly Stn (W), Delisle Road, Mumbai – 400013</p>
           </div>
           <div className="md:col-span-3">
             <h4 className="text-xl uppercase">Contact Us</h4>
             <ul className="mt-5 space-y-4 text-sm text-cream/70">
-              <li className="flex items-start gap-3"><MapPin size={16} className="mt-1 shrink-0 text-sage" />12, Design District, Bengaluru, India</li>
-              <li><a className="flex items-center gap-3 hover:text-sage" href="tel:+919876543210"><Phone size={16} className="text-sage" />+91 98765 43210</a></li>
-              <li><a className="flex items-center gap-3 hover:text-sage break-all" href="mailto:hello@infinitespace.studio"><Mail size={16} className="shrink-0 text-sage" />hello@infinitespace.studio</a></li>
+              <li><a className="flex items-center gap-3 hover:text-sage" href="tel:+919324029464"><Phone size={16} className="text-sage" />+91 9324029464</a></li>
+              <li><a className="flex items-center gap-3 hover:text-sage" href="tel:+919820012617"><Phone size={16} className="text-sage" />+91 9820012617</a></li>
+              <li><a className="flex items-center gap-3 hover:text-sage break-all" href="mailto:infinitespace09@gmail.com"><Mail size={16} className="shrink-0 text-sage" />infinitespace09@gmail.com</a></li>
             </ul>
             <div className="mt-6 flex gap-2">{[Instagram, Facebook, Linkedin].map((Icon, i) => <a key={i} href="#" aria-label={["Instagram", "Facebook", "LinkedIn"][i]} className="h-9 w-9 rounded-full border border-cream/25 flex items-center justify-center hover:bg-sage hover:border-sage transition-colors"><Icon size={15}/></a>)}</div>
           </div>

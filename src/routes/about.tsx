@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Infinite Space Interiors" },
-      { name: "description", content: "A decade of designing elegant, considered interiors across India." },
+      { name: "description", content: "Learn about Infinite Space Interiors, a premium interior design and turnkey contracting company with over 15 years of experience." },
       { property: "og:title", content: "About — Infinite Space" },
       { property: "og:description", content: "Our story, philosophy and craft." },
       { property: "og:type", content: "website" },
@@ -37,9 +37,7 @@ function About() {
           <div className="lg:col-span-5">
             <Reveal delay={150}>
               <p className="text-muted-foreground leading-relaxed">
-                We are a small, senior team — designers, project managers and craftspeople —
-                quietly shaping some of the most distinctive interiors in the country.
-                We believe great design should feel inevitable, never loud.
+                Infinite Space Interiors is a premium interior design and turnkey contracting company with over 15 years of experience in transforming spaces into functional, refined and thoughtfully executed environments. We provide complete interior solutions combining design, quality craftsmanship and detailed project execution.
               </p>
             </Reveal>
           </div>
@@ -60,8 +58,8 @@ function About() {
           <Reveal>
             <p className="eyebrow text-sage-deep">Philosophy</p>
                <h2 className="mt-6 font-serif text-4xl md:text-6xl uppercase font-extrabold leading-none text-balance">
-              "Design disappears when it works.
-              What remains is the way a space makes you feel."
+              "Functional, refined and thoughtfully executed environments.
+              Complete interior solutions from design to project execution."
             </h2>
           </Reveal>
         </div>
@@ -69,17 +67,18 @@ function About() {
 
       {/* VALUES */}
       <section className="py-20 lg:py-28 bg-sage-soft section-wave section-wave-light">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {[
-            ["Restraint", "We edit relentlessly. Every element earns its place."],
-            ["Craft", "Built by hands we know. Carpentry in our own workshop."],
-            ["Honesty", "Real materials, honest pricing, no hidden surprises."],
-            ["Care", "From first call to handover, you work with one team."],
+            ["Residential Interiors", ""],
+            ["Luxury Bungalows", ""],
+            ["Hospitality Projects", ""],
+            ["Office Interiors", ""],
+            ["Retail Spaces", ""],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 80}>
                <p className="font-serif font-extrabold text-sage-deep text-3xl">0{i + 1}</p>
                <h3 className="mt-6 font-bold uppercase text-2xl">{t}</h3>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{d}</p>
+              {d && <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{d}</p>}
             </Reveal>
           ))}
         </div>
@@ -98,13 +97,12 @@ function About() {
           </div>
           <div className="lg:col-span-5">
             <Reveal>
-               <p className="eyebrow text-sage-deep">Family Run</p>
+               <p className="eyebrow text-sage-deep">About Infinite Space</p>
                <h2 className="mt-5 display-title text-4xl md:text-6xl text-balance">
-                 A family-run practice with a workshop at heart.
+                  Complete interiors, thoughtfully executed.
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                Founded in 2013, Infinite Space remains family-led — which is why every project
-                gets senior attention and our own carpenters' hands.
+                 Our complete interior solutions combine design, quality craftsmanship and detailed project execution.
               </p>
                <Button asChild className="mt-8 rounded-sm bg-sage-deep text-primary-foreground hover:bg-charcoal text-xs font-bold uppercase"><Link to="/contact">Visit our studio <ArrowUpRight size={16} /></Link></Button>
             </Reveal>
