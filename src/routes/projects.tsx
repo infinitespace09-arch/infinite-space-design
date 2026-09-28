@@ -26,16 +26,16 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
-  { img: heroLiving, t: "Arched Living Room", c: "Residential", loc: "Bengaluru" },
-  { img: projKitchen, t: "Verdant Kitchen", c: "Residential", loc: "Mumbai" },
-  { img: projOffice, t: "Walnut Reception", c: "Commercial", loc: "Hyderabad" },
-  { img: projBath, t: "Marble Suite", c: "Residential", loc: "Bengaluru" },
-  { img: projRetail, t: "Boutique Loft", c: "Retail", loc: "Pune" },
-  { img: projBedroom, t: "Sage Bedroom", c: "Residential", loc: "Goa" },
-  { img: projWardrobe, t: "Emerald Wardrobe", c: "Carpentry", loc: "Bengaluru" },
-  { img: aboutDining, t: "Sculpted Dining", c: "Residential", loc: "Delhi" },
+  { img: heroLiving, t: "Residential Interiors", c: "Residential Interiors", loc: "" },
+  { img: projKitchen, t: "Luxury Bungalows", c: "Luxury Bungalows", loc: "" },
+  { img: projOffice, t: "Hospitality Projects", c: "Hospitality Projects", loc: "" },
+  { img: projBath, t: "Office Interiors", c: "Office Interiors", loc: "" },
+  { img: projRetail, t: "Retail Spaces", c: "Retail Spaces", loc: "" },
+  { img: projBedroom, t: "Turnkey Interiors", c: "Turnkey Interiors", loc: "" },
+  { img: projWardrobe, t: "Modular Furniture", c: "Modular Furniture", loc: "" },
+  { img: aboutDining, t: "Furniture Work", c: "Furniture Work", loc: "" },
 ];
-const filters = ["All", "Residential", "Commercial", "Retail", "Carpentry"];
+const filters = ["All", "Residential Interiors", "Luxury Bungalows", "Hospitality Projects", "Office Interiors", "Retail Spaces", "Turnkey Interiors", "Modular Furniture", "Furniture Work"];
 
 function Projects() {
   const [filter, setFilter] = useState("All");
@@ -83,7 +83,7 @@ function Projects() {
                 </div>
                 <div className="mt-4 flex items-baseline justify-between">
                    <h3 className="font-bold uppercase text-lg">{p.t}</h3>
-                  <p className="text-xs tracking-widest uppercase text-muted-foreground">{p.loc}</p>
+                   {p.loc && <p className="text-xs tracking-widest uppercase text-muted-foreground">{p.loc}</p>}
                 </div>
                 <p className="text-sm text-sage-deep mt-1">{p.c}</p>
               </div>

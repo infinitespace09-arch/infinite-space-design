@@ -14,7 +14,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Infinite Space Interiors" },
-      { name: "description", content: "Residential, commercial, retail, turnkey, modular kitchens, wardrobes, carpentry and more." },
+      { name: "description", content: "Furniture, civil, electrical, plumbing, POP and gypsum, paint, modular furniture and turnkey interiors." },
       { property: "og:title", content: "Our Services — Infinite Space" },
       { property: "og:description", content: "End-to-end interior design and turnkey contracting." },
       { property: "og:type", content: "website" },
@@ -25,15 +25,14 @@ export const Route = createFileRoute("/services")({
 });
 
 const items = [
-  { t: "Residential Interiors", d: "Homes shaped around the way you actually live — from layout to last cushion.", img: projBedroom },
-  { t: "Commercial Interiors", d: "Workspaces that focus the mind and embody the brand.", img: projOffice },
-  { t: "Retail Interiors", d: "Stores designed as immersive brand journeys.", img: projRetail },
-  { t: "Turnkey Projects", d: "Single-point delivery, from first sketch to final styling.", img: aboutDining },
-  { t: "Modular Kitchen", d: "Bespoke kitchens balancing craft, function and beauty.", img: projKitchen },
-  { t: "Wardrobes", d: "Custom wardrobes tailored to the millimeter, built in our workshop.", img: projWardrobe },
-  { t: "False Ceiling", d: "Architectural ceilings that quietly shape light and proportion.", img: projBath },
-  { t: "Furniture & Custom Carpentry", d: "Heirloom-quality millwork made by hands we know.", img: projWardrobe },
-  { t: "Renovation & Space Planning", d: "Reimagine existing homes and offices for how you live today.", img: projOffice },
+  { t: "Furniture Work", img: projBedroom },
+  { t: "Civil Work", img: projOffice },
+  { t: "Electrical Work", img: projRetail },
+  { t: "Plumbing Work", img: aboutDining },
+  { t: "POP & Gypsum", img: projBath },
+  { t: "Paint & Polish", img: projKitchen },
+  { t: "Modular Furniture", img: projWardrobe },
+  { t: "Turnkey Interiors", img: projOffice },
 ];
 
 function Services() {
@@ -56,7 +55,7 @@ function Services() {
             <Reveal key={s.t}>
                <article className="group h-full border border-border bg-card rounded-sm overflow-hidden hover:border-sage transition-colors">
                  <div className="overflow-hidden hover-zoom"><img src={s.img} alt={s.t} loading="lazy" className="w-full aspect-[4/3] object-cover" /></div>
-                 <div className="p-6"><p className="font-serif font-extrabold text-sage-deep text-2xl">{String(i + 1).padStart(2, "0")}</p><h3 className="mt-3 uppercase text-2xl">{s.t}</h3><p className="mt-3 text-muted-foreground text-sm leading-relaxed">{s.d}</p></div>
+                  <div className="p-6"><p className="font-serif font-extrabold text-sage-deep text-2xl">{String(i + 1).padStart(2, "0")}</p><h3 className="mt-3 uppercase text-2xl">{s.t}</h3></div>
                </article>
             </Reveal>
           ))}

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Home as HomeIcon, Building2, Store, CookingPot, PanelsTopLeft, Hammer, Quote, Wrench, Zap, Droplets, Paintbrush } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Home as HomeIcon, Building2, PanelsTopLeft, Hammer, Quote, Wrench, Zap, Droplets, Paintbrush } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { useEffect, useState } from "react";
@@ -71,7 +71,6 @@ function Counter({ to, suffix = "+" }: { to: number; suffix?: string }) {
 }
 
 function Home() {
-  const [active, setActive] = useState(0);
   const [projectIndex, setProjectIndex] = useState(0);
   const next = () => setProjectIndex((i) => (i + 1) % projects.length);
   const prev = () => setProjectIndex((i) => (i - 1 + projects.length) % projects.length);
@@ -131,7 +130,7 @@ function Home() {
     </section>
 
     <section className="bg-charcoal text-cream py-20 lg:py-28 section-wave section-wave-light">
-      <div className="mx-auto max-w-7xl px-6"><div className="flex justify-between items-end gap-6 mb-9"><div><p className="eyebrow text-cream/75">Kind Words</p><h2 className="mt-4 text-5xl md:text-6xl uppercase">From the people who live in them.</h2></div><div className="flex gap-2"><Button size="icon" variant="outline" className="rounded-sm border-cream/50 text-cream bg-transparent hover:bg-cream hover:text-charcoal" onClick={() => setActive(i => (i - 1 + testimonials.length) % testimonials.length)} aria-label="Previous testimonial"><ArrowLeft/></Button><Button size="icon" className="rounded-sm bg-sage hover:bg-cream hover:text-charcoal" onClick={() => setActive(i => (i + 1) % testimonials.length)} aria-label="Next testimonial"><ArrowRight/></Button></div></div>
+         <div className="mx-auto max-w-7xl px-6"><div className="flex justify-between items-end gap-6 mb-9"><div><p className="eyebrow text-cream/75">Client Testimonials</p><h2 className="mt-4 text-5xl md:text-6xl uppercase">Words from our clients.</h2></div></div>
          <div className="grid lg:grid-cols-[.8fr_1fr_1.1fr] gap-3 min-h-[310px]">
            <div className="bg-sage p-7 flex flex-col justify-between text-primary-foreground"><Quote size={36}/><div><h3 className="text-3xl uppercase">Client testimonials</h3><p className="mt-3 text-xs leading-relaxed max-w-sm">Approved client feedback will be shared here.</p><Button asChild variant="outline" className="mt-6 rounded-sm border-primary-foreground text-primary-foreground bg-transparent hover:bg-cream hover:text-charcoal uppercase text-xs font-extrabold"><Link to="/testimonials">Testimonials <ArrowUpRight size={15}/></Link></Button></div></div>
            <div className="relative min-h-[220px]"><img src={aboutDining} alt="Designed dining space" loading="lazy" className="w-full h-full absolute inset-0 object-cover"/><div className="absolute bottom-0 right-0 bg-card text-card-foreground px-5 py-4 flex gap-6"><div><p className="font-serif text-3xl font-bold"><Counter to={70}/></p><p className="text-[10px] text-muted-foreground">Projects</p></div><div><p className="font-serif text-3xl font-bold"><Counter to={50}/></p><p className="text-[10px] text-muted-foreground">Clients</p></div></div></div>
