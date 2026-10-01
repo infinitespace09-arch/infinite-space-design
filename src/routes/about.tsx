@@ -34,7 +34,7 @@ function About() {
               </h1>
             </Reveal>
           </div>
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 min-w-0">
             <Reveal delay={150}>
               <p className="text-muted-foreground leading-relaxed">
                 Infinite Space Interiors is a premium interior design and turnkey contracting company with over 15 years of experience in transforming spaces into functional, refined and thoughtfully executed environments. We provide complete interior solutions combining design, quality craftsmanship and detailed project execution.
