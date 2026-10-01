@@ -92,7 +92,7 @@ function About() {
               <img src={projOffice} alt="Reception" loading="lazy" className="w-full aspect-[5/4] object-cover rounded-sm" />
             </Reveal>
             <Reveal delay={150}>
-              <img src={projBath} alt="Bath detail" loading="lazy" className="hidden md:block absolute -bottom-12 -right-8 w-1/2 aspect-[3/4] object-cover rounded-sm shadow-2xl border-8 border-cream" />
+              <img src={projBath} alt="Bath detail" loading="lazy" className="hidden md:block absolute -bottom-12 right-0 w-1/2 aspect-[3/4] object-cover rounded-sm shadow-2xl border-8 border-cream" />
             </Reveal>
           </div>
           <div className="lg:col-span-5">
