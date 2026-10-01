@@ -30,11 +30,11 @@ function About() {
             <Reveal>
               <p className="eyebrow text-sage-deep">About Us</p>
               <h1 className="mt-6 display-title text-5xl md:text-7xl lg:text-8xl text-balance">
-                A studio of designers, makers and dreamers.
+                Premium interior design and turnkey contracting.
               </h1>
             </Reveal>
           </div>
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 min-w-0">
             <Reveal delay={150}>
               <p className="text-muted-foreground leading-relaxed">
                 Infinite Space Interiors is a premium interior design and turnkey contracting company with over 15 years of experience in transforming spaces into functional, refined and thoughtfully executed environments. We provide complete interior solutions combining design, quality craftsmanship and detailed project execution.
@@ -92,13 +92,13 @@ function About() {
               <img src={projOffice} alt="Reception" loading="lazy" className="w-full aspect-[5/4] object-cover rounded-sm" />
             </Reveal>
             <Reveal delay={150}>
-              <img src={projBath} alt="Bath detail" loading="lazy" className="hidden md:block absolute -bottom-12 -right-8 w-1/2 aspect-[3/4] object-cover rounded-sm shadow-2xl border-8 border-cream" />
+              <img src={projBath} alt="Bath detail" loading="lazy" className="hidden md:block absolute -bottom-12 right-0 w-1/2 aspect-[3/4] object-cover rounded-sm shadow-2xl border-8 border-cream" />
             </Reveal>
           </div>
           <div className="lg:col-span-5">
             <Reveal>
                <p className="eyebrow text-sage-deep">About Infinite Space</p>
-               <h2 className="mt-5 display-title text-4xl md:text-6xl text-balance">
+                <h2 className="mt-5 display-title text-4xl md:text-6xl text-balance break-words">
                   Complete interiors, thoughtfully executed.
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
