@@ -10,6 +10,9 @@ import projOffice from "@/assets/proj-office.jpg";
 import projWardrobe from "@/assets/proj-wardrobe.jpg";
 import aboutDining from "@/assets/about-dining.jpg";
 import heroLiving from "@/assets/hero-living.jpg";
+import toniGuyInteriorOneAsset from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
+import toniGuyInteriorTwoAsset from "@/assets/toni-guy-andheri-interior-2.jpg.asset.json";
+import toniGuyExteriorAsset from "@/assets/toni-guy-andheri-exterior.jpg.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -26,6 +29,9 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: toniGuyExteriorAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
+  { img: toniGuyInteriorOneAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
+  { img: toniGuyInteriorTwoAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
   { img: heroLiving, t: "Residential Interiors", c: "Residential Interiors", loc: "" },
   { img: projKitchen, t: "Luxury Bungalows", c: "Luxury Bungalows", loc: "" },
   { img: projOffice, t: "Hospitality Projects", c: "Hospitality Projects", loc: "" },
