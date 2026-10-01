@@ -30,7 +30,7 @@ function About() {
             <Reveal>
               <p className="eyebrow text-sage-deep">About Us</p>
               <h1 className="mt-6 display-title text-5xl md:text-7xl lg:text-8xl text-balance">
-                A studio of designers, makers and dreamers.
+                Premium interior design and turnkey contracting.
               </h1>
             </Reveal>
           </div>

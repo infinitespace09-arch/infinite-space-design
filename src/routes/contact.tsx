@@ -26,7 +26,7 @@ function Contact() {
     e.preventDefault();
     setSending(true);
     setTimeout(() => {
-      toast.success("Thank you — we'll be in touch within 24 hours.");
+      toast.success("Thank you — your inquiry has been received.");
       (e.target as HTMLFormElement).reset();
       setSending(false);
     }, 700);
