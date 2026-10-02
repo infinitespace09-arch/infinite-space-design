@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin, Mail, Phone, ArrowUpRight } from "lucide-react";
-import logo from "@/assets/logo-trim.webp";
+import logoAsset from "@/assets/infinite-space-logo.png.asset.json";
+const logo = logoAsset.url;
 
 export function Footer() {
   return (
