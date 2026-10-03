@@ -2,3 +2,4 @@
 - [x] Align navigation, inner pages, and footer to the same visual language.
 - [x] Check desktop/mobile rendering, interactions, and page metadata.
 - [x] Add the TONI&GUY Salon — Andheri photos to the Projects Gallery.
+- [x] Add the Anil Bhai — Santacruz photos to the Projects Gallery.
