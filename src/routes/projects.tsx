@@ -41,6 +41,14 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: kamalJainWa0033, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0036, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0023, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0026, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0027, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0047, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0049, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0053, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
   { img: anilBhaiLivingOneAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
   { img: anilBhaiTvUnitAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
   { img: anilBhaiLivingTwoAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
