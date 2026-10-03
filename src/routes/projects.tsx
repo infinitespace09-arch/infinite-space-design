@@ -25,6 +25,12 @@ import kamalJainWa0036 from "@/assets/kamal-jain-worli-0413-wa0036.jpg.asset.jso
 import kamalJainWa0047 from "@/assets/kamal-jain-worli-0716-wa0047.jpg.asset.json";
 import kamalJainWa0049 from "@/assets/kamal-jain-worli-0716-wa0049.jpg.asset.json";
 import kamalJainWa0053 from "@/assets/kamal-jain-worli-0716-wa0053.jpg.asset.json";
+import playSchoolHall from "@/assets/play-group-school-pune-hall.jpg.asset.json";
+import playSchoolActivity from "@/assets/play-group-school-pune-activity.jpg.asset.json";
+import playSchoolWallart from "@/assets/play-group-school-pune-wallart.jpg.asset.json";
+import playSchoolClassroom from "@/assets/play-group-school-pune-classroom.jpg.asset.json";
+import playSchoolSeating from "@/assets/play-group-school-pune-seating.jpg.asset.json";
+import playSchoolCorridor from "@/assets/play-group-school-pune-corridor.jpg.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -41,6 +47,12 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: playSchoolHall.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
+  { img: playSchoolActivity.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
+  { img: playSchoolWallart.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
+  { img: playSchoolClassroom.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
+  { img: playSchoolSeating.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
+  { img: playSchoolCorridor.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
   { img: kamalJainWa0033.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
   { img: kamalJainWa0036.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
   { img: kamalJainWa0023.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
