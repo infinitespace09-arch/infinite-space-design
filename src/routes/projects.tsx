@@ -17,6 +17,14 @@ import anilBhaiLivingOneAsset from "@/assets/anil-bhai-santacruz-living-1.jpg.as
 import anilBhaiTvUnitAsset from "@/assets/anil-bhai-santacruz-tv-unit.jpg.asset.json";
 import anilBhaiLivingTwoAsset from "@/assets/anil-bhai-santacruz-living-2.jpg.asset.json";
 import anilBhaiBedroomAsset from "@/assets/anil-bhai-santacruz-bedroom.jpg.asset.json";
+import kamalJainWa0023 from "@/assets/kamal-jain-worli-0413-wa0023.jpg.asset.json";
+import kamalJainWa0026 from "@/assets/kamal-jain-worli-0413-wa0026.jpg.asset.json";
+import kamalJainWa0027 from "@/assets/kamal-jain-worli-0413-wa0027.jpg.asset.json";
+import kamalJainWa0033 from "@/assets/kamal-jain-worli-0413-wa0033.jpg.asset.json";
+import kamalJainWa0036 from "@/assets/kamal-jain-worli-0413-wa0036.jpg.asset.json";
+import kamalJainWa0047 from "@/assets/kamal-jain-worli-0716-wa0047.jpg.asset.json";
+import kamalJainWa0049 from "@/assets/kamal-jain-worli-0716-wa0049.jpg.asset.json";
+import kamalJainWa0053 from "@/assets/kamal-jain-worli-0716-wa0053.jpg.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -33,6 +41,14 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: kamalJainWa0033.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0036.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0023.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0026.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0027.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0047.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0049.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWa0053.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
   { img: anilBhaiLivingOneAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
   { img: anilBhaiTvUnitAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
   { img: anilBhaiLivingTwoAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },

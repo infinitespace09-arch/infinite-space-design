@@ -1,5 +1,9 @@
-- [x] Match the reference homepage composition and palette with existing content.
-- [x] Align navigation, inner pages, and footer to the same visual language.
-- [x] Check desktop/mobile rendering, interactions, and page metadata.
-- [x] Add the TONI&GUY Salon — Andheri photos to the Projects Gallery.
-- [x] Add the Anil Bhai — Santacruz photos to the Projects Gallery.
+# Infinite Space Interiors — Roadmap
+
+- [x] Restyle site to reference design (dark hero, inset header, burnt-orange accents)
+- [x] Replace all placeholder content with real company information
+- [x] Security update: @tanstack packages
+- [x] New logo + favicon
+- [x] Add TONI&GUY Salon — Andheri photos to gallery
+- [x] Add Anil Bhai — Santacruz photos to gallery
+- [x] Add Kamal Jain — Worli photos to gallery (8 photos, Residential Interiors)
