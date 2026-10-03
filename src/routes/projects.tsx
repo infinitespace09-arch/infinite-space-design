@@ -13,6 +13,10 @@ import heroLiving from "@/assets/hero-living.jpg";
 import toniGuyInteriorOneAsset from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
 import toniGuyInteriorTwoAsset from "@/assets/toni-guy-andheri-interior-2.jpg.asset.json";
 import toniGuyExteriorAsset from "@/assets/toni-guy-andheri-exterior.jpg.asset.json";
+import anilBhaiLivingOneAsset from "@/assets/anil-bhai-santacruz-living-1.jpg.asset.json";
+import anilBhaiTvUnitAsset from "@/assets/anil-bhai-santacruz-tv-unit.jpg.asset.json";
+import anilBhaiLivingTwoAsset from "@/assets/anil-bhai-santacruz-living-2.jpg.asset.json";
+import anilBhaiBedroomAsset from "@/assets/anil-bhai-santacruz-bedroom.jpg.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -29,6 +33,10 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: anilBhaiLivingOneAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
+  { img: anilBhaiTvUnitAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
+  { img: anilBhaiLivingTwoAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
+  { img: anilBhaiBedroomAsset.url, t: "Anil Bhai — Santacruz", c: "Residential Interiors", loc: "Santacruz" },
   { img: toniGuyExteriorAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
   { img: toniGuyInteriorOneAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
   { img: toniGuyInteriorTwoAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
