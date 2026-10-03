@@ -7,3 +7,5 @@
 - [x] Add TONI&GUY Salon — Andheri photos to gallery
 - [x] Add Anil Bhai — Santacruz photos to gallery
 - [x] Add Kamal Jain — Worli photos to gallery (8 photos, Residential Interiors)
+
+- [x] Add Play Group School — Pune photos (6) to Projects Gallery under Turnkey Interiors
