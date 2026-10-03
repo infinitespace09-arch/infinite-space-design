@@ -31,6 +31,12 @@ import playSchoolWallart from "@/assets/play-group-school-pune-wallart.jpg.asset
 import playSchoolClassroom from "@/assets/play-group-school-pune-classroom.jpg.asset.json";
 import playSchoolSeating from "@/assets/play-group-school-pune-seating.jpg.asset.json";
 import playSchoolCorridor from "@/assets/play-group-school-pune-corridor.jpg.asset.json";
+import tietoSignage from "@/assets/tieto-pune-signage.jpg.asset.json";
+import tietoTrainingRoom from "@/assets/tieto-pune-training-room.jpg.asset.json";
+import tietoGlassCabin from "@/assets/tieto-pune-glass-cabin.jpg.asset.json";
+import tietoWorkstationsOne from "@/assets/tieto-pune-workstations-1.jpg.asset.json";
+import tietoWorkstationsTwo from "@/assets/tieto-pune-workstations-2.jpg.asset.json";
+import tietoWorkstationsThree from "@/assets/tieto-pune-workstations-3.jpg.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -47,6 +53,12 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: tietoSignage.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
+  { img: tietoTrainingRoom.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
+  { img: tietoGlassCabin.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
+  { img: tietoWorkstationsOne.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
+  { img: tietoWorkstationsTwo.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
+  { img: tietoWorkstationsThree.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
   { img: playSchoolHall.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
   { img: playSchoolActivity.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
   { img: playSchoolWallart.url, t: "Play Group School — Pune", c: "Turnkey Interiors", loc: "Pune" },
