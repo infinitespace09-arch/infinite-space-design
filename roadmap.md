@@ -16,3 +16,5 @@
 
 - [x] Add Ayan Chaterjee — Dahisar photos (10) to Projects Gallery under Residential Interiors
 - [x] Add six additional Ayan Chaterjee — Dahisar photos (living, TV unit, dresser, shelf, entry) to Projects Gallery
+- [x] Add Sagar Bhai — Mira Bhayander photos (10) to Projects Gallery under Residential Interiors
+
