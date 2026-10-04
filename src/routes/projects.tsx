@@ -57,6 +57,13 @@ import ayanTvWall from "@/assets/ayan-chaterjee-dahisar-tv-wall.jpg.asset.json";
 import ayanBedroomFour from "@/assets/ayan-chaterjee-dahisar-bedroom-4.jpg.asset.json";
 import ayanWardrobes from "@/assets/ayan-chaterjee-dahisar-wardrobes.jpg.asset.json";
 import ayanBedroomFive from "@/assets/ayan-chaterjee-dahisar-bedroom-5.jpg.asset.json";
+import ayanTwoLivingOne from "@/assets/ayan-chaterjee-dahisar-2-living-1.jpg.asset.json";
+import ayanTwoLivingTwo from "@/assets/ayan-chaterjee-dahisar-2-living-2.jpg.asset.json";
+import ayanTwoTvUnit from "@/assets/ayan-chaterjee-dahisar-2-tv-unit.jpg.asset.json";
+import ayanTwoDresser from "@/assets/ayan-chaterjee-dahisar-2-dresser.jpg.asset.json";
+import ayanTwoShelf from "@/assets/ayan-chaterjee-dahisar-2-shelf.jpg.asset.json";
+import ayanTwoEntry from "@/assets/ayan-chaterjee-dahisar-2-entry.jpg.asset.json";
+
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -73,7 +80,14 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: ayanTwoLivingOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoLivingTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoTvUnit.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoDresser.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoShelf.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoEntry.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanKitchenOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+
   { img: ayanKitchenTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanBedroomOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanBedroomTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
