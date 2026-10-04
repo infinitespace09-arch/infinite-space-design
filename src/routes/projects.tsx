@@ -63,6 +63,17 @@ import ayanTwoTvUnit from "@/assets/ayan-chaterjee-dahisar-2-tv-unit.jpg.asset.j
 import ayanTwoDresser from "@/assets/ayan-chaterjee-dahisar-2-dresser.jpg.asset.json";
 import ayanTwoShelf from "@/assets/ayan-chaterjee-dahisar-2-shelf.jpg.asset.json";
 import ayanTwoEntry from "@/assets/ayan-chaterjee-dahisar-2-entry.jpg.asset.json";
+import sagarKitchenOne from "@/assets/sagar-bhai-mira-bhayander-kitchen-1.jpg.asset.json";
+import sagarKitchenTwo from "@/assets/sagar-bhai-mira-bhayander-kitchen-2.jpg.asset.json";
+import sagarSitting from "@/assets/sagar-bhai-mira-bhayander-sitting.jpg.asset.json";
+import sagarEntryOne from "@/assets/sagar-bhai-mira-bhayander-entry-1.jpg.asset.json";
+import sagarEntryTwo from "@/assets/sagar-bhai-mira-bhayander-entry-2.jpg.asset.json";
+import sagarDining from "@/assets/sagar-bhai-mira-bhayander-dining.jpg.asset.json";
+import sagarMirrorWall from "@/assets/sagar-bhai-mira-bhayander-mirror-wall.jpg.asset.json";
+import sagarTvUnit from "@/assets/sagar-bhai-mira-bhayander-tv-unit.jpg.asset.json";
+import sagarLivingOne from "@/assets/sagar-bhai-mira-bhayander-living-1.jpg.asset.json";
+import sagarLivingTwo from "@/assets/sagar-bhai-mira-bhayander-living-2.jpg.asset.json";
+
 
 
 export const Route = createFileRoute("/projects")({
@@ -80,6 +91,16 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: sagarLivingOne.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarLivingTwo.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarTvUnit.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarMirrorWall.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarDining.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarEntryTwo.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarEntryOne.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarSitting.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarKitchenTwo.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarKitchenOne.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
   { img: ayanTwoLivingOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanTwoLivingTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanTwoTvUnit.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
