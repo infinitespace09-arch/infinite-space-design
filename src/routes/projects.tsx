@@ -57,6 +57,13 @@ import ayanTvWall from "@/assets/ayan-chaterjee-dahisar-tv-wall.jpg.asset.json";
 import ayanBedroomFour from "@/assets/ayan-chaterjee-dahisar-bedroom-4.jpg.asset.json";
 import ayanWardrobes from "@/assets/ayan-chaterjee-dahisar-wardrobes.jpg.asset.json";
 import ayanBedroomFive from "@/assets/ayan-chaterjee-dahisar-bedroom-5.jpg.asset.json";
+import ayanTwoLivingOne from "@/assets/ayan-chaterjee-dahisar-2-living-1.jpg.asset.json";
+import ayanTwoLivingTwo from "@/assets/ayan-chaterjee-dahisar-2-living-2.jpg.asset.json";
+import ayanTwoTvUnit from "@/assets/ayan-chaterjee-dahisar-2-tv-unit.jpg.asset.json";
+import ayanTwoDresser from "@/assets/ayan-chaterjee-dahisar-2-dresser.jpg.asset.json";
+import ayanTwoShelf from "@/assets/ayan-chaterjee-dahisar-2-shelf.jpg.asset.json";
+import ayanTwoEntry from "@/assets/ayan-chaterjee-dahisar-2-entry.jpg.asset.json";
+
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
