@@ -47,6 +47,16 @@ import iqbalBedroomFour from "@/assets/iqbal-bhai-jogeshwari-bedroom-4.jpg.asset
 import iqbalBedroomFive from "@/assets/iqbal-bhai-jogeshwari-bedroom-5.jpg.asset.json";
 import iqbalBedsideUnit from "@/assets/iqbal-bhai-jogeshwari-bedside-unit.jpg.asset.json";
 import iqbalBathroom from "@/assets/iqbal-bhai-jogeshwari-bathroom.jpg.asset.json";
+import ayanKitchenOne from "@/assets/ayan-chaterjee-dahisar-kitchen-1.jpg.asset.json";
+import ayanKitchenTwo from "@/assets/ayan-chaterjee-dahisar-kitchen-2.jpg.asset.json";
+import ayanBedroomOne from "@/assets/ayan-chaterjee-dahisar-bedroom-1.jpg.asset.json";
+import ayanBedroomTwo from "@/assets/ayan-chaterjee-dahisar-bedroom-2.jpg.asset.json";
+import ayanBedroomThree from "@/assets/ayan-chaterjee-dahisar-bedroom-3.jpg.asset.json";
+import ayanWardrobeColumn from "@/assets/ayan-chaterjee-dahisar-wardrobe-column.jpg.asset.json";
+import ayanTvWall from "@/assets/ayan-chaterjee-dahisar-tv-wall.jpg.asset.json";
+import ayanBedroomFour from "@/assets/ayan-chaterjee-dahisar-bedroom-4.jpg.asset.json";
+import ayanWardrobes from "@/assets/ayan-chaterjee-dahisar-wardrobes.jpg.asset.json";
+import ayanBedroomFive from "@/assets/ayan-chaterjee-dahisar-bedroom-5.jpg.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -63,6 +73,16 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: ayanKitchenOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanKitchenTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanBedroomOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanBedroomTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanBedroomThree.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanWardrobeColumn.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTvWall.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanBedroomFour.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanWardrobes.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanBedroomFive.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: iqbalKitchen.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
   { img: iqbalBedroomOne.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
   { img: iqbalBedroomTwo.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },

@@ -13,3 +13,5 @@
 - [x] Add Tieto — Pune photos (6) to Projects Gallery under Office Interiors
 
 - [x] Add Iqbal Bhai — Jogeshwari photos (10) to Projects Gallery under Residential Interiors
+
+- [x] Add Ayan Chaterjee — Dahisar photos (10) to Projects Gallery under Residential Interiors
