@@ -37,6 +37,16 @@ import tietoGlassCabin from "@/assets/tieto-pune-glass-cabin.jpg.asset.json";
 import tietoWorkstationsOne from "@/assets/tieto-pune-workstations-1.jpg.asset.json";
 import tietoWorkstationsTwo from "@/assets/tieto-pune-workstations-2.jpg.asset.json";
 import tietoWorkstationsThree from "@/assets/tieto-pune-workstations-3.jpg.asset.json";
+import iqbalKitchen from "@/assets/iqbal-bhai-jogeshwari-kitchen.jpg.asset.json";
+import iqbalBedroomOne from "@/assets/iqbal-bhai-jogeshwari-bedroom-1.jpg.asset.json";
+import iqbalBedroomTwo from "@/assets/iqbal-bhai-jogeshwari-bedroom-2.jpg.asset.json";
+import iqbalWardrobe from "@/assets/iqbal-bhai-jogeshwari-wardrobe.jpg.asset.json";
+import iqbalBathroomVanity from "@/assets/iqbal-bhai-jogeshwari-bathroom-vanity.jpg.asset.json";
+import iqbalBedroomThree from "@/assets/iqbal-bhai-jogeshwari-bedroom-3.jpg.asset.json";
+import iqbalBedroomFour from "@/assets/iqbal-bhai-jogeshwari-bedroom-4.jpg.asset.json";
+import iqbalBedroomFive from "@/assets/iqbal-bhai-jogeshwari-bedroom-5.jpg.asset.json";
+import iqbalBedsideUnit from "@/assets/iqbal-bhai-jogeshwari-bedside-unit.jpg.asset.json";
+import iqbalBathroom from "@/assets/iqbal-bhai-jogeshwari-bathroom.jpg.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -53,6 +63,16 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: iqbalKitchen.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBedroomOne.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBedroomTwo.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalWardrobe.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBathroomVanity.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBedroomThree.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBedroomFour.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBedroomFive.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBedsideUnit.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
+  { img: iqbalBathroom.url, t: "Iqbal Bhai — Jogeshwari", c: "Residential Interiors", loc: "Jogeshwari" },
   { img: tietoSignage.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
   { img: tietoTrainingRoom.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },
   { img: tietoGlassCabin.url, t: "Tieto — Pune", c: "Office Interiors", loc: "Pune" },

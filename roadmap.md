@@ -11,3 +11,5 @@
 - [x] Add Play Group School — Pune photos (6) to Projects Gallery under Turnkey Interiors
 
 - [x] Add Tieto — Pune photos (6) to Projects Gallery under Office Interiors
+
+- [x] Add Iqbal Bhai — Jogeshwari photos (10) to Projects Gallery under Residential Interiors
