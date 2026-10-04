@@ -80,7 +80,14 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: ayanTwoLivingOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoLivingTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoTvUnit.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoDresser.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoShelf.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+  { img: ayanTwoEntry.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanKitchenOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
+
   { img: ayanKitchenTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanBedroomOne.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
   { img: ayanBedroomTwo.url, t: "Ayan Chaterjee — Dahisar", c: "Residential Interiors", loc: "Dahisar" },
