@@ -17,6 +17,8 @@
 - [x] Add Ayan Chaterjee — Dahisar photos (10) to Projects Gallery under Residential Interiors
 - [x] Add six additional Ayan Chaterjee — Dahisar photos (living, TV unit, dresser, shelf, entry) to Projects Gallery
 - [x] Add Sagar Bhai — Mira Bhayander photos (10) to Projects Gallery under Residential Interiors
+- [x] Add eight additional Sagar Bhai — Mira Bhayander photos (foyer, living, wardrobes, bedrooms) to Projects Gallery
+
 
 
 - [x] Add ten AXXELA — Andheri office photos (reception, workstations, feature wall, trading desk, conference, training room, corridors, storage, bathroom) to Projects Gallery under Office Interiors
