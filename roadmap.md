@@ -22,3 +22,4 @@
 
 
 - [x] Add ten AXXELA — Andheri office photos (reception, workstations, feature wall, trading desk, conference, training room, corridors, storage, bathroom) to Projects Gallery under Office Interiors
+- [x] Add four additional AXXELA — Andheri photos (triangle acoustic wall, meeting room, workstations, washroom) to Projects Gallery
