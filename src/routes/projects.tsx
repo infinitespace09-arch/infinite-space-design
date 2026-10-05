@@ -81,6 +81,16 @@ import sagarBedCurtains from "@/assets/sagar-bhai-mira-bhayander-bed-curtains.jp
 import sagarBedOrange from "@/assets/sagar-bhai-mira-bhayander-bed-orange.jpg.asset.json";
 import sagarWardrobesGreen from "@/assets/sagar-bhai-mira-bhayander-wardrobes-green.jpg.asset.json";
 import sagarWardrobeGreen from "@/assets/sagar-bhai-mira-bhayander-wardrobe-green.jpg.asset.json";
+import axxelaConferenceRoom from "@/assets/axxela-andheri-conference-room.jpg.asset.json";
+import axxelaWorkstationsOne from "@/assets/axxela-andheri-workstations-1.jpg.asset.json";
+import axxelaStorageUnit from "@/assets/axxela-andheri-storage-unit.jpg.asset.json";
+import axxelaTrainingRoom from "@/assets/axxela-andheri-training-room.jpg.asset.json";
+import axxelaTradingDesk from "@/assets/axxela-andheri-trading-desk.jpg.asset.json";
+import axxelaYellowCorridor from "@/assets/axxela-andheri-yellow-corridor.jpg.asset.json";
+import axxelaFeatureWall from "@/assets/axxela-andheri-feature-wall.jpg.asset.json";
+import axxelaPaintWork from "@/assets/axxela-andheri-paint-work.jpg.asset.json";
+import axxelaBathroom from "@/assets/axxela-andheri-bathroom.jpg.asset.json";
+import axxelaReception from "@/assets/axxela-andheri-reception.jpg.asset.json";
 
 
 
@@ -99,6 +109,16 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: axxelaReception.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaWorkstationsOne.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaFeatureWall.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaTradingDesk.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaConferenceRoom.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaTrainingRoom.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaYellowCorridor.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaPaintWork.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaStorageUnit.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaBathroom.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
   { img: sagarFoyerMarble.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
   { img: sagarLivingTv.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
   { img: sagarWardrobeBrown.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
