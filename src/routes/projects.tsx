@@ -91,6 +91,10 @@ import axxelaFeatureWall from "@/assets/axxela-andheri-feature-wall.jpg.asset.js
 import axxelaPaintWork from "@/assets/axxela-andheri-paint-work.jpg.asset.json";
 import axxelaBathroom from "@/assets/axxela-andheri-bathroom.jpg.asset.json";
 import axxelaReception from "@/assets/axxela-andheri-reception.jpg.asset.json";
+import axxelaTwoWorkstationsTwo from "@/assets/axxela-andheri-2-workstations-2.jpg.asset.json";
+import axxelaTwoUrinals from "@/assets/axxela-andheri-2-urinals.jpg.asset.json";
+import axxelaTwoTriangleWall from "@/assets/axxela-andheri-2-triangle-wall.jpg.asset.json";
+import axxelaTwoMeetingRoom from "@/assets/axxela-andheri-2-meeting-room.jpg.asset.json";
 
 
 
@@ -109,6 +113,10 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: axxelaTwoTriangleWall.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaTwoMeetingRoom.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaTwoWorkstationsTwo.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
+  { img: axxelaTwoUrinals.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
   { img: axxelaReception.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
   { img: axxelaWorkstationsOne.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
   { img: axxelaFeatureWall.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
