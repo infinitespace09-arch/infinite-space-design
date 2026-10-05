@@ -73,6 +73,14 @@ import sagarMirrorWall from "@/assets/sagar-bhai-mira-bhayander-mirror-wall.jpg.
 import sagarTvUnit from "@/assets/sagar-bhai-mira-bhayander-tv-unit.jpg.asset.json";
 import sagarLivingOne from "@/assets/sagar-bhai-mira-bhayander-living-1.jpg.asset.json";
 import sagarLivingTwo from "@/assets/sagar-bhai-mira-bhayander-living-2.jpg.asset.json";
+import sagarFoyerMarble from "@/assets/sagar-bhai-mira-bhayander-foyer-marble.jpg.asset.json";
+import sagarLivingTv from "@/assets/sagar-bhai-mira-bhayander-living-tv.jpg.asset.json";
+import sagarWardrobeBrown from "@/assets/sagar-bhai-mira-bhayander-wardrobe-brown.jpg.asset.json";
+import sagarBedMural from "@/assets/sagar-bhai-mira-bhayander-bed-mural.jpg.asset.json";
+import sagarBedCurtains from "@/assets/sagar-bhai-mira-bhayander-bed-curtains.jpg.asset.json";
+import sagarBedOrange from "@/assets/sagar-bhai-mira-bhayander-bed-orange.jpg.asset.json";
+import sagarWardrobesGreen from "@/assets/sagar-bhai-mira-bhayander-wardrobes-green.jpg.asset.json";
+import sagarWardrobeGreen from "@/assets/sagar-bhai-mira-bhayander-wardrobe-green.jpg.asset.json";
 
 
 
@@ -91,6 +99,14 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: sagarFoyerMarble.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarLivingTv.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarWardrobeBrown.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarBedMural.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarBedCurtains.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarBedOrange.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarWardrobesGreen.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
+  { img: sagarWardrobeGreen.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
   { img: sagarLivingOne.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
   { img: sagarLivingTwo.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
   { img: sagarTvUnit.url, t: "Sagar Bhai — Mira Bhayander", c: "Residential Interiors", loc: "Mira Bhayander" },
