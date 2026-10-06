@@ -1,10 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
-import aboutDining from "@/assets/about-dining.jpg";
-import projBath from "@/assets/proj-bath.jpg";
-import projOffice from "@/assets/proj-office.jpg";
+import aboutDiningAsset from "@/assets/sagar-bhai-mira-bhayander-dining.jpg.asset.json";
+import projBathAsset from "@/assets/iqbal-bhai-jogeshwari-bathroom.jpg.asset.json";
+import projOfficeAsset from "@/assets/axxela-andheri-reception.jpg.asset.json";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const aboutDining = aboutDiningAsset.url;
+const projBath = projBathAsset.url;
+const projOffice = projOfficeAsset.url;
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -48,7 +52,7 @@ function About() {
       <section className="pb-20 lg:pb-28">
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-12 gap-6">
           <Reveal className="md:col-span-7"><img src={aboutDining} alt="Dining" loading="lazy" className="w-full aspect-[4/3] object-cover rounded-sm" /></Reveal>
-          <Reveal className="md:col-span-5 md:pt-20" delay={100}><img src={projBath} alt="Bath" loading="lazy" className="w-full aspect-[3/4] object-cover rounded-sm" /></Reveal>
+          <Reveal className="md:col-span-5 md:pt-20" delay={100}><img src={projBath} alt="Bath" loading="lazy" className="w-full aspect-[4/3] object-cover rounded-sm" /></Reveal>
         </div>
       </section>
 
@@ -89,10 +93,10 @@ function About() {
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 relative">
             <Reveal>
-              <img src={projOffice} alt="Reception" loading="lazy" className="w-full aspect-[5/4] object-cover rounded-sm" />
+              <img src={projOffice} alt="Reception" loading="lazy" className="w-full aspect-[4/3] object-cover rounded-sm" />
             </Reveal>
             <Reveal delay={150}>
-              <img src={projBath} alt="Bath detail" loading="lazy" className="hidden md:block absolute -bottom-12 right-0 w-1/2 aspect-[3/4] object-cover rounded-sm shadow-2xl border-8 border-cream" />
+              <img src={projBath} alt="Bath detail" loading="lazy" className="hidden md:block absolute -bottom-12 right-0 w-1/2 aspect-[4/3] object-cover rounded-sm shadow-2xl border-8 border-cream" />
             </Reveal>
           </div>
           <div className="lg:col-span-5">
