@@ -114,6 +114,15 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: mehulKitchenOne.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulDiningDisplay.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulBedroomTv.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulBedroomHeadboard.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulBedroomHorseArt.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulKitchenTwo.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulDiningYellowArt.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulBedroomGoldArt.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulDiningGlass.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: axxelaTwoTriangleWall.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
   { img: axxelaTwoMeetingRoom.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
   { img: axxelaTwoWorkstationsTwo.url, t: "Axxela — Andheri", c: "Office Interiors", loc: "Andheri" },
