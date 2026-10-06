@@ -96,6 +96,13 @@ import mehulKitchenTwo from "@/assets/mehul-thakkar-powai-kitchen-2.jpg.asset.js
 import mehulDiningYellowArt from "@/assets/mehul-thakkar-powai-dining-yellow-art.jpg.asset.json";
 import mehulBedroomGoldArt from "@/assets/mehul-thakkar-powai-bedroom-gold-art.jpg.asset.json";
 import mehulDiningGlass from "@/assets/mehul-thakkar-powai-dining-glass.jpg.asset.json";
+import mehulLivingSwing from "@/assets/mehul-thakkar-powai-living-swing.jpg.asset.json";
+import mehulKitchenThree from "@/assets/mehul-thakkar-powai-kitchen-3.jpg.asset.json";
+import mehulEntryGanesha from "@/assets/mehul-thakkar-powai-entry-ganesha.jpg.asset.json";
+import mehulLivingTwo from "@/assets/mehul-thakkar-powai-living-2.jpg.asset.json";
+import mehulSwingBalcony from "@/assets/mehul-thakkar-powai-swing-balcony.jpg.asset.json";
+import mehulKitchenGlassDoor from "@/assets/mehul-thakkar-powai-kitchen-glass-door.jpg.asset.json";
+
 
 
 
@@ -114,6 +121,12 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: mehulLivingSwing.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulKitchenThree.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulEntryGanesha.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulLivingTwo.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulSwingBalcony.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulKitchenGlassDoor.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulKitchenOne.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulDiningDisplay.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulBedroomTv.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
