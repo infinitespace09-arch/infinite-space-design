@@ -2,14 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import projKitchen from "@/assets/proj-kitchen.jpg";
-import projBedroom from "@/assets/proj-bedroom.jpg";
-import projBath from "@/assets/proj-bath.jpg";
-import projRetail from "@/assets/proj-retail.jpg";
-import projOffice from "@/assets/proj-office.jpg";
-import projWardrobe from "@/assets/proj-wardrobe.jpg";
-import aboutDining from "@/assets/about-dining.jpg";
-import heroLiving from "@/assets/hero-living.jpg";
 import toniGuyInteriorOneAsset from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
 import toniGuyInteriorTwoAsset from "@/assets/toni-guy-andheri-interior-2.jpg.asset.json";
 import toniGuyExteriorAsset from "@/assets/toni-guy-andheri-exterior.jpg.asset.json";
@@ -199,14 +191,6 @@ const all = [
   { img: toniGuyExteriorAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
   { img: toniGuyInteriorOneAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
   { img: toniGuyInteriorTwoAsset.url, t: "TONI&GUY Salon — Andheri", c: "Retail Spaces", loc: "Andheri" },
-  { img: heroLiving, t: "Residential Interiors", c: "Residential Interiors", loc: "" },
-  { img: projKitchen, t: "Luxury Bungalows", c: "Luxury Bungalows", loc: "" },
-  { img: projOffice, t: "Hospitality Projects", c: "Hospitality Projects", loc: "" },
-  { img: projBath, t: "Office Interiors", c: "Office Interiors", loc: "" },
-  { img: projRetail, t: "Retail Spaces", c: "Retail Spaces", loc: "" },
-  { img: projBedroom, t: "Turnkey Interiors", c: "Turnkey Interiors", loc: "" },
-  { img: projWardrobe, t: "Modular Furniture", c: "Modular Furniture", loc: "" },
-  { img: aboutDining, t: "Furniture Work", c: "Furniture Work", loc: "" },
 ];
 const filters = ["All", "Residential Interiors", "Luxury Bungalows", "Hospitality Projects", "Office Interiors", "Retail Spaces", "Turnkey Interiors", "Modular Furniture", "Furniture Work"];
 
@@ -250,9 +234,9 @@ function Projects() {
         <div className="mx-auto max-w-7xl px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {shown.map((p, i) => (
             <Reveal key={p.t + i} delay={i * 50}>
-              <div className={`group ${i % 5 === 0 ? "sm:col-span-2" : ""}`}>
+              <div className="group">
                 <div className="overflow-hidden rounded-sm hover-zoom">
-                  <img src={p.img} alt={p.t} loading="lazy" className={`w-full object-cover ${i % 5 === 0 ? "aspect-[16/10]" : "aspect-[4/5]"}`} />
+                  <img src={p.img} alt={p.t} loading="lazy" className="w-full aspect-[4/3] object-cover" />
                 </div>
                 <div className="mt-4 flex items-baseline justify-between">
                    <h3 className="font-bold uppercase text-lg">{p.t}</h3>

@@ -2,13 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import projKitchen from "@/assets/proj-kitchen.jpg";
-import projBedroom from "@/assets/proj-bedroom.jpg";
-import projBath from "@/assets/proj-bath.jpg";
-import projRetail from "@/assets/proj-retail.jpg";
-import projOffice from "@/assets/proj-office.jpg";
-import projWardrobe from "@/assets/proj-wardrobe.jpg";
-import aboutDining from "@/assets/about-dining.jpg";
+import projKitchenAsset from "@/assets/iqbal-bhai-jogeshwari-kitchen.jpg.asset.json";
+import projBedroomAsset from "@/assets/ayan-chaterjee-dahisar-bedroom-1.jpg.asset.json";
+import projBathAsset from "@/assets/iqbal-bhai-jogeshwari-bathroom.jpg.asset.json";
+import projRetailAsset from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
+import projOfficeAsset from "@/assets/axxela-andheri-reception.jpg.asset.json";
+import projWardrobeAsset from "@/assets/ayan-chaterjee-dahisar-wardrobes.jpg.asset.json";
+import aboutDiningAsset from "@/assets/sagar-bhai-mira-bhayander-dining.jpg.asset.json";
+
+const projKitchen = projKitchenAsset.url;
+const projBedroom = projBedroomAsset.url;
+const projBath = projBathAsset.url;
+const projRetail = projRetailAsset.url;
+const projOffice = projOfficeAsset.url;
+const projWardrobe = projWardrobeAsset.url;
+const aboutDining = aboutDiningAsset.url;
 
 export const Route = createFileRoute("/services")({
   head: () => ({

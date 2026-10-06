@@ -3,14 +3,23 @@ import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Home as HomeIcon, Building2
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { useEffect, useState } from "react";
-import heroLiving from "@/assets/hero-living.jpg";
-import projKitchen from "@/assets/proj-kitchen.jpg";
-import projBedroom from "@/assets/proj-bedroom.jpg";
-import projBath from "@/assets/proj-bath.jpg";
-import projRetail from "@/assets/proj-retail.jpg";
-import projOffice from "@/assets/proj-office.jpg";
-import projWardrobe from "@/assets/proj-wardrobe.jpg";
-import aboutDining from "@/assets/about-dining.jpg";
+import heroLivingAsset from "@/assets/sagar-bhai-mira-bhayander-living-1.jpg.asset.json";
+import projKitchenAsset from "@/assets/iqbal-bhai-jogeshwari-kitchen.jpg.asset.json";
+import projBedroomAsset from "@/assets/ayan-chaterjee-dahisar-bedroom-1.jpg.asset.json";
+import projBathAsset from "@/assets/iqbal-bhai-jogeshwari-bathroom.jpg.asset.json";
+import projRetailAsset from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
+import projOfficeAsset from "@/assets/axxela-andheri-reception.jpg.asset.json";
+import projWardrobeAsset from "@/assets/ayan-chaterjee-dahisar-wardrobes.jpg.asset.json";
+import aboutDiningAsset from "@/assets/sagar-bhai-mira-bhayander-dining.jpg.asset.json";
+
+const heroLiving = heroLivingAsset.url;
+const projKitchen = projKitchenAsset.url;
+const projBedroom = projBedroomAsset.url;
+const projBath = projBathAsset.url;
+const projRetail = projRetailAsset.url;
+const projOffice = projOfficeAsset.url;
+const projWardrobe = projWardrobeAsset.url;
+const aboutDining = aboutDiningAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -91,7 +100,7 @@ function Home() {
           </div>
         </div>
         <div className="hidden lg:block absolute right-6 xl:right-0 bottom-28 w-[250px] bg-card text-card-foreground p-3 shadow-xl rounded-sm rotate-[2deg]">
-           <img src={projKitchen} alt="Residential interior project" className="w-full h-36 object-cover" />
+           <img src={projKitchen} alt="Residential interior project" className="w-full aspect-[4/3] object-cover" />
            <div className="flex items-center justify-between pt-3"><div><p className="text-[10px] font-bold uppercase text-muted-foreground">Selected Work</p><p className="font-serif font-bold uppercase text-xl">Residential Interiors</p></div><ArrowUpRight size={18} className="text-sage-deep"/></div>
         </div>
         <div className="absolute bottom-9 left-6 right-6 mx-auto max-w-7xl hidden md:flex items-center gap-3 text-xs font-bold uppercase text-cream/70"><span className="h-px w-10 bg-sage"/>Interior Design & Turnkey Contracting</div>
@@ -115,7 +124,7 @@ function Home() {
           {services.map(s => <Reveal key={s.num}><Link to="/services" className="group flex flex-col min-h-[205px] h-full border border-border bg-card/60 p-6 hover:bg-card hover:border-sage transition-colors rounded-sm"><div className="flex items-start justify-between"><s.icon size={30} strokeWidth={1.5} className="text-charcoal"/><span className="text-sage-deep font-serif text-2xl font-bold">{s.num}</span></div><h3 className="mt-6 text-2xl uppercase">{s.title}</h3><p className="mt-2 text-xs leading-relaxed text-muted-foreground max-w-sm">{s.desc}</p><span className="mt-4 inline-flex items-center gap-1 text-[10px] uppercase font-extrabold group-hover:text-sage-deep">Explore <ArrowUpRight size={13}/></span></Link></Reveal>)}
         </div>
          <div className="mt-12 grid lg:grid-cols-2 bg-card shadow-sm rounded-sm overflow-hidden">
-          <img src={projKitchen} alt="Custom kitchen craftsmanship" loading="lazy" className="w-full h-full min-h-[280px] max-h-[420px] object-cover" />
+          <img src={projKitchen} alt="Custom kitchen craftsmanship" loading="lazy" className="w-full aspect-[4/3] object-cover" />
            <div className="p-7 lg:p-12 flex flex-col justify-center"><p className="eyebrow text-sage-deep">Why Choose Us</p><h3 className="mt-4 text-4xl uppercase">Design.<br/>Craftsmanship.<br/>Execution.</h3><div className="mt-6 space-y-4">{[["Complete interior solutions", ""],["Quality craftsmanship", ""],["Detailed project execution", ""]].map(([t,d]) => <div key={t} className="flex gap-3"><Check size={17} className="mt-0.5 text-sage-deep shrink-0"/><div><p className="text-xs font-extrabold uppercase">{t}</p>{d && <p className="text-xs mt-1 text-muted-foreground">{d}</p>}</div></div>)}</div></div>
         </div>
       </div>
@@ -133,13 +142,13 @@ function Home() {
          <div className="mx-auto max-w-7xl px-6"><div className="flex justify-between items-end gap-6 mb-9"><div><p className="eyebrow text-cream/75">Client Testimonials</p><h2 className="mt-4 text-5xl md:text-6xl uppercase">Words from our clients.</h2></div></div>
          <div className="grid lg:grid-cols-[.8fr_1fr_1.1fr] gap-3 min-h-[310px]">
            <div className="bg-sage p-7 flex flex-col justify-between text-primary-foreground"><Quote size={36}/><div><h3 className="text-3xl uppercase">Client testimonials</h3><p className="mt-3 text-xs leading-relaxed max-w-sm">Approved client feedback will be shared here.</p><Button asChild variant="outline" className="mt-6 rounded-sm border-primary-foreground text-primary-foreground bg-transparent hover:bg-cream hover:text-charcoal uppercase text-xs font-extrabold"><Link to="/testimonials">Testimonials <ArrowUpRight size={15}/></Link></Button></div></div>
-           <div className="relative min-h-[220px]"><img src={aboutDining} alt="Designed dining space" loading="lazy" className="w-full h-full absolute inset-0 object-cover"/><div className="absolute bottom-0 right-0 bg-card text-card-foreground px-5 py-4 flex gap-6"><div><p className="font-serif text-3xl font-bold"><Counter to={70}/></p><p className="text-[10px] text-muted-foreground">Projects</p></div><div><p className="font-serif text-3xl font-bold"><Counter to={50}/></p><p className="text-[10px] text-muted-foreground">Clients</p></div></div></div>
+            <div className="relative aspect-[4/3]"><img src={aboutDining} alt="Designed dining space" loading="lazy" className="w-full h-full absolute inset-0 object-cover"/><div className="absolute bottom-0 right-0 bg-card text-card-foreground px-5 py-4 flex gap-6"><div><p className="font-serif text-3xl font-bold"><Counter to={70}/></p><p className="text-[10px] text-muted-foreground">Projects</p></div><div><p className="font-serif text-3xl font-bold"><Counter to={50}/></p><p className="text-[10px] text-muted-foreground">Clients</p></div></div></div>
            <div className="bg-card text-card-foreground p-7 flex flex-col justify-center"><p className="text-base leading-relaxed">Client testimonials</p><p className="mt-2 text-xs text-muted-foreground">Approved client feedback will be shared here.</p></div>
         </div>
       </div>
     </section>
 
-    <section className="py-20 lg:py-28 bg-background section-wave section-wave-blush"><div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-8 items-stretch"><div className="bg-sage-soft p-7 lg:p-12"><p className="eyebrow text-sage-deep">How We Work</p><h2 className="mt-4 text-5xl md:text-6xl uppercase">A clear path from vision to handover.</h2><div className="mt-9 space-y-2">{process.map(p => <div key={p.n} className="flex items-center gap-4 border-b border-border py-3"><span className="font-serif text-2xl text-sage-deep font-bold">{p.n}</span><div><h3 className="uppercase text-xl">{p.t}</h3></div></div>)}</div></div><div className="relative min-h-[400px]"><img src={projOffice} alt="Finished interior project" loading="lazy" className="absolute inset-0 w-full h-full object-cover"/><div className="absolute bottom-5 left-5 bg-card text-card-foreground p-5"><p className="font-serif text-4xl font-bold"><Counter to={70}/></p><p className="text-xs">Projects completed</p></div></div></div></section>
+    <section className="py-20 lg:py-28 bg-background section-wave section-wave-blush"><div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-8 items-stretch"><div className="bg-sage-soft p-7 lg:p-12"><p className="eyebrow text-sage-deep">How We Work</p><h2 className="mt-4 text-5xl md:text-6xl uppercase">A clear path from vision to handover.</h2><div className="mt-9 space-y-2">{process.map(p => <div key={p.n} className="flex items-center gap-4 border-b border-border py-3"><span className="font-serif text-2xl text-sage-deep font-bold">{p.n}</span><div><h3 className="uppercase text-xl">{p.t}</h3></div></div>)}</div></div><div className="relative aspect-[4/3]"><img src={projOffice} alt="Finished interior project" loading="lazy" className="absolute inset-0 w-full h-full object-cover"/><div className="absolute bottom-5 left-5 bg-card text-card-foreground p-5"><p className="font-serif text-4xl font-bold"><Counter to={70}/></p><p className="text-xs">Projects completed</p></div></div></div></section>
 
     <section className="bg-sage-soft pt-20 pb-0"><div className="mx-auto max-w-7xl px-6"><div className="text-center"><p className="eyebrow text-sage-deep">Let’s Begin</p><h2 className="mt-4 text-5xl md:text-6xl uppercase">Have a space in mind?</h2></div><div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">{[heroLiving, projKitchen, projBedroom, projRetail].map((img,i) => <img key={img} src={img} alt={["Living room", "Kitchen", "Bedroom", "Retail interior"][i]} loading="lazy" className="aspect-[4/3] w-full object-cover rounded-sm"/>)}</div><div className="relative mt-10 overflow-hidden bg-charcoal text-cream text-center py-14 px-6"><img src={heroLiving} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20"/><div className="relative"><h2 className="text-4xl md:text-5xl uppercase">Have a space in mind? Let's begin.</h2><p className="mt-3 text-sm text-cream/70">Tell us what you're dreaming of. We would love to hear about it.</p><Button asChild className="mt-6 bg-sage hover:bg-cream hover:text-charcoal rounded-sm uppercase text-xs font-extrabold"><Link to="/contact">Start your project <ArrowUpRight size={16}/></Link></Button></div></div></div></section>
   </div>;
