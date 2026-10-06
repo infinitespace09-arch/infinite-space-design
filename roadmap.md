@@ -23,4 +23,5 @@
 
 - [x] Add ten AXXELA — Andheri office photos (reception, workstations, feature wall, trading desk, conference, training room, corridors, storage, bathroom) to Projects Gallery under Office Interiors
 - [x] Add four additional AXXELA — Andheri photos (triangle acoustic wall, meeting room, workstations, washroom) to Projects Gallery
+- [x] Add Mehul Thakkar — Powai photos (9: kitchens, bedrooms, dining areas) to Projects Gallery under Residential Interiors
 - [x] Remove all non-client photos and standardize every client photo to a responsive 4:3 crop
