@@ -121,6 +121,12 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: mehulLivingSwing.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulKitchenThree.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulEntryGanesha.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulLivingTwo.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulSwingBalcony.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
+  { img: mehulKitchenGlassDoor.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulKitchenOne.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulDiningDisplay.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulBedroomTv.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
