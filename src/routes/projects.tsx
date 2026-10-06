@@ -87,6 +87,15 @@ import axxelaTwoWorkstationsTwo from "@/assets/axxela-andheri-2-workstations-2.j
 import axxelaTwoUrinals from "@/assets/axxela-andheri-2-urinals.jpg.asset.json";
 import axxelaTwoTriangleWall from "@/assets/axxela-andheri-2-triangle-wall.jpg.asset.json";
 import axxelaTwoMeetingRoom from "@/assets/axxela-andheri-2-meeting-room.jpg.asset.json";
+import mehulKitchenOne from "@/assets/mehul-thakkar-powai-kitchen-1.jpg.asset.json";
+import mehulDiningDisplay from "@/assets/mehul-thakkar-powai-dining-display.jpg.asset.json";
+import mehulBedroomTv from "@/assets/mehul-thakkar-powai-bedroom-tv.jpg.asset.json";
+import mehulBedroomHeadboard from "@/assets/mehul-thakkar-powai-bedroom-headboard.jpg.asset.json";
+import mehulBedroomHorseArt from "@/assets/mehul-thakkar-powai-bedroom-horse-art.jpg.asset.json";
+import mehulKitchenTwo from "@/assets/mehul-thakkar-powai-kitchen-2.jpg.asset.json";
+import mehulDiningYellowArt from "@/assets/mehul-thakkar-powai-dining-yellow-art.jpg.asset.json";
+import mehulBedroomGoldArt from "@/assets/mehul-thakkar-powai-bedroom-gold-art.jpg.asset.json";
+import mehulDiningGlass from "@/assets/mehul-thakkar-powai-dining-glass.jpg.asset.json";
 
 
 
