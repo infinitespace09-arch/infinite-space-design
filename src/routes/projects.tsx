@@ -1,6 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
+import kajariaLivingOne from "@/assets/kajaria-living-1.jpg.asset.json";
+import kajariaLivingTwo from "@/assets/kajaria-living-2.jpg.asset.json";
+import kajariaLivingThree from "@/assets/kajaria-living-3.jpg.asset.json";
+import kajariaLivingFour from "@/assets/kajaria-living-4.jpg.asset.json";
+import kajariaBathroomOne from "@/assets/kajaria-bathroom-1.jpg.asset.json";
+import kajariaBathroomTwo from "@/assets/kajaria-bathroom-2.jpg.asset.json";
+import kajariaBedroomOne from "@/assets/kajaria-bedroom-1.jpg.asset.json";
+import kajariaBedroomTwo from "@/assets/kajaria-bedroom-2.jpg.asset.json";
+import kajariaWardrobeCane from "@/assets/kajaria-wardrobe-cane.jpg.asset.json";
 import bhoomiWorkstationsWide from "@/assets/bhoomi-world-bhiwandi-workstations-wide.png.asset.json";
 import bhoomiWorkstationsOne from "@/assets/bhoomi-world-bhiwandi-workstations-1.png.asset.json";
 import bhoomiWorkstationsTwo from "@/assets/bhoomi-world-bhiwandi-workstations-2.png.asset.json";
@@ -127,6 +136,15 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: kajariaLivingOne.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaLivingTwo.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaLivingThree.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaLivingFour.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaBathroomOne.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaBathroomTwo.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaBedroomOne.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaBedroomTwo.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
+  { img: kajariaWardrobeCane.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
   { img: bhoomiWorkstationsWide.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
   { img: bhoomiWorkstationsOne.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
   { img: bhoomiWorkstationsTwo.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
