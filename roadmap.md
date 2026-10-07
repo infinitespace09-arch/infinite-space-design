@@ -25,4 +25,5 @@
 - [x] Add four additional AXXELA — Andheri photos (triangle acoustic wall, meeting room, workstations, washroom) to Projects Gallery
 - [x] Add Mehul Thakkar — Powai photos (9: kitchens, bedrooms, dining areas) to Projects Gallery under Residential Interiors
 - [x] Add six additional Mehul Thakkar — Powai photos (living areas, swing, Ganesha entry, kitchen) to Projects Gallery
+- [x] Add Bhoomi World — Bhiwandi office photos (6: workstations, lime paneling, desk detail) to Projects Gallery under Office Interiors
 - [x] Remove all non-client photos and standardize every client photo to a responsive 4:3 crop
