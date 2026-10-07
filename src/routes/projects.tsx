@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
+import bhoomiWorkstationsWide from "@/assets/bhoomi-world-bhiwandi-workstations-wide.png.asset.json";
+import bhoomiWorkstationsOne from "@/assets/bhoomi-world-bhiwandi-workstations-1.png.asset.json";
+import bhoomiWorkstationsTwo from "@/assets/bhoomi-world-bhiwandi-workstations-2.png.asset.json";
+import bhoomiWorkstationsThree from "@/assets/bhoomi-world-bhiwandi-workstations-3.jpg.asset.json";
+import bhoomiPaneling from "@/assets/bhoomi-world-bhiwandi-paneling-1.jpg.asset.json";
+import bhoomiDeskDetail from "@/assets/bhoomi-world-bhiwandi-desk-detail.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import toniGuyInteriorOneAsset from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
 import toniGuyInteriorTwoAsset from "@/assets/toni-guy-andheri-interior-2.jpg.asset.json";
@@ -121,6 +127,12 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: bhoomiWorkstationsWide.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
+  { img: bhoomiWorkstationsOne.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
+  { img: bhoomiWorkstationsTwo.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
+  { img: bhoomiWorkstationsThree.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
+  { img: bhoomiPaneling.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
+  { img: bhoomiDeskDetail.url, t: "Bhoomi World — Bhiwandi", c: "Office Interiors", loc: "Bhiwandi" },
   { img: mehulLivingSwing.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulKitchenThree.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
   { img: mehulEntryGanesha.url, t: "Mehul Thakkar — Powai", c: "Residential Interiors", loc: "Powai" },
