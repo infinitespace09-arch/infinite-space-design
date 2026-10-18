@@ -29,3 +29,4 @@
 - [x] Add Kajaria — Sambhaji Nagar & Kolkata photos (9: living areas, bathrooms, bedrooms, cane wardrobe) to Projects Gallery under Residential Interiors
 - [x] Add Bajaj — Sambhaji Nagar photos (9: bathrooms, vanities, bathtub, wardrobes) to Projects Gallery under Residential Interiors
 - [x] Remove all non-client photos and standardize every client photo to a responsive 4:3 crop
+- [x] Add Satyjeet Boss — Kolkata photos (4: bedrooms with mural feature wall, wardrobe) to Projects Gallery under Residential Interiors
