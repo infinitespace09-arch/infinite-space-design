@@ -3,11 +3,11 @@ import { useState } from "react";
 import { ArrowUpRight, ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { filterProjects, type Project, type ProjectCategory } from "@/lib/projects";
+import { filterProjects, type Project, type ProjectFilter } from "@/lib/projects";
 import { pageHead } from "@/lib/site-content";
 
 export const Route = createFileRoute("/projects")({
-  validateSearch: (search: Record<string, unknown>): { category?: ProjectCategory } => ({ category: search.category === "Residential" || search.category === "Commercial" ? search.category : undefined }),
+  validateSearch: (search: Record<string, unknown>): { category?: Exclude<ProjectFilter, "All Projects"> } => ({ category: search.category === "Residential" || search.category === "Commercial" || search.category === "Retail" ? search.category : undefined }),
   head: () => pageHead("Residential & Commercial Projects", "Explore genuine residential interior execution, office interiors and retail fit-outs by Infinite Space Interiors.", "/projects"),
   component: Projects,
 });
@@ -22,14 +22,14 @@ function Projects() {
     <section className="bg-sage-soft page-intro section-wave section-wave-light"><div className="mx-auto max-w-7xl px-6">
       <p className="eyebrow text-sage-deep">Our Projects</p><h1 className="mt-5 display-title max-w-4xl">Spaces we've brought to life.</h1>
       <p className="mt-6 text-muted-foreground max-w-2xl leading-relaxed">Residential projects and commercial fit-outs, from homes and apartments to offices, retail spaces and salons.</p>
-      <div className="mt-8 flex flex-wrap gap-2" aria-label="Project categories">{(["All Projects", "Residential", "Commercial"] as const).map(item => <Button key={item} variant={filter === item ? "default" : "outline"} aria-pressed={filter === item} onClick={() => navigate({ search: { category: item === "All Projects" ? undefined : item }, replace: true, resetScroll: false })} className="rounded-sm text-xs uppercase font-bold">{item}</Button>)}</div>
+      <div className="mt-8 flex flex-wrap gap-2" aria-label="Project categories">{(["All Projects", "Residential", "Commercial", "Retail"] as const).map(item => <Button key={item} variant={filter === item ? "default" : "outline"} aria-pressed={filter === item} onClick={() => navigate({ search: { category: item === "All Projects" ? undefined : item }, replace: true, resetScroll: false })} className="rounded-sm text-xs uppercase font-bold">{item}</Button>)}</div>
     </div></section>
     <section className="py-12 lg:py-20"><div className="mx-auto max-w-7xl px-6"><p className="mb-7 text-sm text-muted-foreground" aria-live="polite">{filterProjects(filter).length} projects</p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">{filterProjects(filter).map(project => <article key={project.id} data-project={project.id}>
         <Button variant="ghost" onClick={() => {setSelected(project); setImageIndex(0);}} aria-label={`Open ${project.name}`} className="group block h-auto w-full p-0 text-left whitespace-normal hover:bg-transparent rounded-sm">
           <div className="relative overflow-hidden aspect-[4/3] hover-zoom rounded-sm"><img src={project.cover} alt={`${project.name} — ${project.category.toLowerCase()} interior project`} loading="lazy" className="w-full h-full object-cover"/><span className="absolute bottom-3 right-3 bg-card text-card-foreground px-3 py-1.5 text-xs">{project.images.length} photos</span></div>
           <div className="mt-4 flex items-start justify-between gap-3"><h2 className="text-2xl uppercase leading-tight">{project.name}</h2><ArrowUpRight size={20} className="shrink-0 text-sage-deep mt-1"/></div>
-          <p className="mt-2 text-xs uppercase text-sage-deep">{project.category} Projects</p><p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground"><MapPin size={12}/>{project.location}</p>
+          <p className="mt-2 text-xs uppercase text-sage-deep">{project.category}{project.sector ? ` · ${project.sector}` : ""} Projects</p><p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground"><MapPin size={12}/>{project.location}</p>
         </Button>
       </article>)}</div>
     </div></section>
