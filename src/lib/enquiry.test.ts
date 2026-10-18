@@ -17,3 +17,8 @@ test("enquiry handoff targets the verified WhatsApp number and includes entered 
   expect(url.searchParams.get("text")).toContain("Interior execution for a home.");
   expect(url.searchParams.get("text")).toContain("Location: Mumbai");
 });
+test("WhatsApp preserves every field and encodes special characters safely", () => {
+  const data = {...enquiry,name:"Karan & Co",budget:"₹5–10 lakh",message:"Kitchen & wardrobe? 100% custom + finishing."};
+  const message = new URL(enquiryWhatsAppUrl(data)).searchParams.get("text");
+  for (const value of Object.values(data)) expect(message).toContain(value);
+});
