@@ -1,10 +1,12 @@
 # Infinite Space Interiors — Roadmap
 
-- [ ] Refine homepage, About and Services around turnkey execution; preserve brand and genuine photographs
-- [ ] Group gallery into actual projects with Residential/Commercial filters and project galleries
-- [ ] Replace Testimonials with Our Process and update navigation/SEO
-- [ ] Refine contact form; remove false success and verify real delivery status
-- [ ] Verify all pages, photos, filters and navigation on desktop/tablet/mobile
+- [x] Refine homepage, About and Services around turnkey execution; preserve brand and genuine photographs
+- [x] Group all 133 photos into 14 actual projects with Residential/Commercial filters and project galleries
+- [x] Replace Testimonials with Our Process and update navigation/SEO; preserve old URL as a redirect
+- [x] Refine contact form; remove false success and verify WhatsApp preparation and validation (no delivery claimed)
+- [x] Verify all pages, photos, filters and navigation on desktop/tablet/mobile
+- [ ] Direct online enquiry delivery, if required: blocked on a configured submission service; current form explicitly hands off to WhatsApp
+- [ ] Confirm previously supplied 15+ years experience and business totals before restoring homepage counters
 
 - [x] Restyle site to reference design (dark hero, inset header, burnt-orange accents)
 - [x] Replace all placeholder content with real company information
