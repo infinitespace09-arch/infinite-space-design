@@ -2,6 +2,10 @@
 import { describe, expect, test } from "bun:test";
 import { projects, filterProjects } from "./projects";
 describe("Project catalogue", () => {
+  test("Retail shows the genuine TONI&GUY salon and retains its Commercial classification", () => {
+    expect(filterProjects("Retail").map(project => project.id)).toEqual(["toni-guy-salon-andheri"]);
+    expect(filterProjects("Commercial").some(project => project.id === "toni-guy-salon-andheri")).toBe(true);
+  });
   test("all 133 existing photographs remain in 14 distinct projects", () => {
     expect(projects).toHaveLength(14);
     expect(projects.flatMap(project => project.images)).toHaveLength(133);

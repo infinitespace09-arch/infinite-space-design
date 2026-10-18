@@ -133,7 +133,8 @@ import kamalJainWardrobeGoldTwo from "@/assets/kamal-jain-worli-wardrobe-gold-2.
 import kamalJainCeiling from "@/assets/kamal-jain-worli-ceiling.jpg.asset.json";
 
 export type ProjectCategory = "Residential" | "Commercial";
-export type Project = { id: string; name: string; category: ProjectCategory; location: string; cover: string; images: string[] };
+export type ProjectFilter = "All Projects" | ProjectCategory | "Retail";
+export type Project = { id: string; name: string; category: ProjectCategory; sector?: "Retail"; location: string; cover: string; images: string[] };
 
 export const projects: Project[] = [
   { id: "kamal-jain-worli", name: "Kamal Jain \u2014 Worli", category: "Residential", location: "Worli", cover: kamalJainTvUnit.url, images: [kamalJainWardrobeGoldOne.url, kamalJainWardrobeGrey.url, kamalJainTvUnit.url, kamalJainWardrobeGoldTwo.url, kamalJainCeiling.url, kamalJainWa0033.url, kamalJainWa0036.url, kamalJainWa0023.url, kamalJainWa0026.url, kamalJainWa0027.url, kamalJainWa0047.url, kamalJainWa0049.url, kamalJainWa0053.url] },
@@ -149,7 +150,7 @@ export const projects: Project[] = [
   { id: "tieto-pune", name: "Tieto \u2014 Pune", category: "Commercial", location: "Pune", cover: tietoSignage.url, images: [tietoSignage.url, tietoTrainingRoom.url, tietoGlassCabin.url, tietoWorkstationsOne.url, tietoWorkstationsTwo.url, tietoWorkstationsThree.url] },
   { id: "play-group-school-pune", name: "Play Group School \u2014 Pune", category: "Commercial", location: "Pune", cover: playSchoolHall.url, images: [playSchoolHall.url, playSchoolActivity.url, playSchoolWallart.url, playSchoolClassroom.url, playSchoolSeating.url, playSchoolCorridor.url] },
   { id: "anil-bhai-santacruz", name: "Anil Bhai \u2014 Santacruz", category: "Residential", location: "Santacruz", cover: anilBhaiLivingOneAsset.url, images: [anilBhaiLivingOneAsset.url, anilBhaiTvUnitAsset.url, anilBhaiLivingTwoAsset.url, anilBhaiBedroomAsset.url] },
-  { id: "toni-guy-salon-andheri", name: "TONI&GUY Salon \u2014 Andheri", category: "Commercial", location: "Andheri", cover: toniGuyInteriorOneAsset.url, images: [toniGuyExteriorAsset.url, toniGuyInteriorOneAsset.url, toniGuyInteriorTwoAsset.url] },
+  { id: "toni-guy-salon-andheri", name: "TONI&GUY Salon \u2014 Andheri", category: "Commercial", sector: "Retail", location: "Andheri", cover: toniGuyInteriorOneAsset.url, images: [toniGuyExteriorAsset.url, toniGuyInteriorOneAsset.url, toniGuyInteriorTwoAsset.url] },
 ];
 
-export function filterProjects(category: "All Projects" | ProjectCategory) { return category === "All Projects" ? projects : projects.filter(project => project.category === category); }
+export function filterProjects(category: ProjectFilter) { return category === "All Projects" ? projects : projects.filter(project => category === "Retail" ? project.sector === "Retail" : project.category === category); }
