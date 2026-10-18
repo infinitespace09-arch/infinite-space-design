@@ -1,4 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import satyjeetBedroomOne from "@/assets/satyjeet-boss-kolkata-bedroom-1.jpg.asset.json";
+import satyjeetBedroomTwo from "@/assets/satyjeet-boss-kolkata-bedroom-2.jpg.asset.json";
+import satyjeetBedroomThree from "@/assets/satyjeet-boss-kolkata-bedroom-3.jpg.asset.json";
+import satyjeetWardrobe from "@/assets/satyjeet-boss-kolkata-wardrobe.jpg.asset.json";
 import bajajBathroomFlutedOne from "@/assets/bajaj-sambhaji-bathroom-fluted-1.jpg.asset.json";
 import bajajBathroomFlutedTwo from "@/assets/bajaj-sambhaji-bathroom-fluted-2.jpg.asset.json";
 import bajajVanity from "@/assets/bajaj-sambhaji-vanity.jpg.asset.json";
