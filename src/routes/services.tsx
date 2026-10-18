@@ -1,83 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/site/Reveal";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import projKitchenAsset from "@/assets/iqbal-bhai-jogeshwari-kitchen.jpg.asset.json";
-import projBedroomAsset from "@/assets/ayan-chaterjee-dahisar-bedroom-1.jpg.asset.json";
-import projBathAsset from "@/assets/iqbal-bhai-jogeshwari-bathroom.jpg.asset.json";
-import projRetailAsset from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
-import projOfficeAsset from "@/assets/axxela-andheri-reception.jpg.asset.json";
-import projWardrobeAsset from "@/assets/ayan-chaterjee-dahisar-wardrobes.jpg.asset.json";
-import aboutDiningAsset from "@/assets/sagar-bhai-mira-bhayander-dining.jpg.asset.json";
-
-const projKitchen = projKitchenAsset.url;
-const projBedroom = projBedroomAsset.url;
-const projBath = projBathAsset.url;
-const projRetail = projRetailAsset.url;
-const projOffice = projOfficeAsset.url;
-const projWardrobe = projWardrobeAsset.url;
-const aboutDining = aboutDiningAsset.url;
-
-export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services — Infinite Space Interiors" },
-      { name: "description", content: "Furniture, civil, electrical, plumbing, POP and gypsum, paint, modular furniture and turnkey interiors." },
-      { property: "og:title", content: "Our Services — Infinite Space" },
-      { property: "og:description", content: "End-to-end interior design and turnkey contracting." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Services,
-});
-
-const items = [
-  { t: "Furniture Work", img: projBedroom },
-  { t: "Civil Work", img: projOffice },
-  { t: "Electrical Work", img: projRetail },
-  { t: "Plumbing Work", img: aboutDining },
-  { t: "POP & Gypsum", img: projBath },
-  { t: "Paint & Polish", img: projKitchen },
-  { t: "Modular Furniture", img: projWardrobe },
-  { t: "Turnkey Interiors", img: projOffice },
-];
-
-function Services() {
-  return (
-    <div>
-       <section className="bg-sage-soft pt-32 pb-16 lg:pt-40 lg:pb-20 section-wave section-wave-light">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal>
-             <p className="eyebrow text-sage-deep">Services</p>
-             <h1 className="mt-6 display-title text-5xl md:text-7xl lg:text-8xl text-balance max-w-5xl">
-               One studio. Every discipline of interior.
-            </h1>
-          </Reveal>
-        </div>
-      </section>
-
-       <section className="py-20 lg:py-28">
-         <div className="mx-auto max-w-7xl px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {items.map((s, i) => (
-            <Reveal key={s.t}>
-               <article className="group h-full border border-border bg-card rounded-sm overflow-hidden hover:border-sage transition-colors">
-                 <div className="overflow-hidden hover-zoom"><img src={s.img} alt={s.t} loading="lazy" className="w-full aspect-[4/3] object-cover" /></div>
-                  <div className="p-6"><p className="font-serif font-extrabold text-sage-deep text-2xl">{String(i + 1).padStart(2, "0")}</p><h3 className="mt-3 uppercase text-2xl">{s.t}</h3></div>
-               </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-       <section className="bg-charcoal py-20 text-cream">
-        <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-           <h2 className="display-title text-4xl md:text-6xl lg:text-7xl text-balance max-w-3xl">
-             Tell us about your space.
-          </h2>
-           <Button asChild className="rounded-sm bg-sage text-primary-foreground hover:bg-cream hover:text-charcoal text-xs font-bold uppercase"><Link to="/contact">Request a consultation <ArrowUpRight size={18} /></Link></Button>
-        </div>
-      </section>
-    </div>
-  );
-}
+import { Reveal } from "@/components/site/Reveal";
+import { pageHead, serviceGroups } from "@/lib/site-content";
+import kitchen from "@/assets/iqbal-bhai-jogeshwari-kitchen.jpg.asset.json";
+import office from "@/assets/axxela-andheri-reception.jpg.asset.json";
+import furniture from "@/assets/ayan-chaterjee-dahisar-wardrobes.jpg.asset.json";
+const images=[kitchen,office,furniture];
+export const Route = createFileRoute("/services")({head:()=>pageHead("Interior Contracting Services","Residential interior execution, commercial and retail fit-outs, civil work, furniture, services coordination and turnkey contracting in Mumbai.","/services"),component:Services});
+function Services(){return <div><section className="bg-sage-soft page-intro section-wave section-wave-light"><div className="mx-auto max-w-7xl px-6"><p className="eyebrow text-sage-deep">Our Services</p><h1 className="mt-5 display-title max-w-4xl">Complete interiors.<br/>Coordinated execution.</h1><p className="mt-6 max-w-2xl text-muted-foreground leading-relaxed">Interior design and turnkey contracting, with the required workstreams brought together under an agreed project scope.</p></div></section><section className="py-16 lg:py-20"><div className="mx-auto max-w-7xl px-6 space-y-16">{serviceGroups.map((group,index)=><Reveal key={group.title}><div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center border-b border-border pb-16"><img src={images[index]?.url} alt={group.title} loading="lazy" className="aspect-[4/3] w-full object-cover"/><div><p className="font-serif text-3xl text-sage-deep">0{index+1}</p><h2 className="mt-3 text-4xl uppercase">{group.title}</h2><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{group.summary}</p><ul className="mt-6 space-y-3">{group.items.map(item=><li key={item} className="flex gap-3 text-sm"><Check size={16} className="text-primary shrink-0 mt-0.5"/>{item}</li>)}</ul></div></div></Reveal>)}</div></section><section className="bg-charcoal text-cream py-16"><div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-7"><h2 className="text-4xl md:text-5xl uppercase">Tell us about your project.</h2><Button asChild><Link to="/contact">Request a consultation <ArrowUpRight size={16}/></Link></Button></div></section></div>}
