@@ -10,7 +10,7 @@ const links = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
-  { to: "/testimonials", label: "Testimonials" },
+  { to: "/process", label: "Our Process" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -24,7 +24,7 @@ export function Navbar() {
         </Link>
         <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-5 xl:gap-8">
           {links.map((l) => (
-            <Link key={l.to} to={l.to} activeProps={{ className: "text-sage-deep" }} className="text-[11px] font-extrabold uppercase hover:text-sage-deep transition-colors">{l.label}</Link>
+            <Link key={l.to} to={l.to} activeOptions={{ exact: true }} activeProps={{ className: "text-sage-deep" }} className="text-[11px] font-extrabold uppercase hover:text-sage-deep transition-colors">{l.label}</Link>
           ))}
         </nav>
         <Button asChild className="hidden lg:inline-flex h-10 rounded-sm bg-sage-deep text-primary-foreground hover:bg-charcoal text-xs font-extrabold uppercase px-4">

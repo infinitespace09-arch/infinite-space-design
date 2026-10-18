@@ -1,102 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Infinite Space Interiors" },
-      { name: "description", content: "Contact Infinite Space Interiors for premium interior design and turnkey contracting in Mumbai." },
-      { property: "og:title", content: "Contact Infinite Space" },
-      { property: "og:description", content: "Start a project with our studio." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-  }),
-  component: Contact,
-});
-
-function Contact() {
-  const [sending, setSending] = useState(false);
-
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSending(true);
-    setTimeout(() => {
-      toast.success("Thank you — your inquiry has been received.");
-      (e.target as HTMLFormElement).reset();
-      setSending(false);
-    }, 700);
-  }
-
-  return (
-    <div>
-       <section className="bg-sage-soft pt-32 pb-20 lg:pt-40">
-        <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-7">
-            <Reveal>
-               <p className="eyebrow text-sage-deep">Get in Touch</p>
-               <h1 className="mt-6 display-title text-5xl md:text-7xl text-balance">
-                 Let's design something remarkable.
-              </h1>
-              <p className="mt-6 text-muted-foreground max-w-lg leading-relaxed">
-                 Tell us about your interior project and we will be in touch.
-              </p>
-            </Reveal>
-
-            <Reveal delay={100}>
-              <form onSubmit={onSubmit} className="mt-12 grid sm:grid-cols-2 gap-5">
-                <Field label="Name" name="name" required />
-                <Field label="Email" name="email" type="email" required />
-                <Field label="Phone" name="phone" />
-                <Field label="Project type" name="type" placeholder="Residential, Retail…" />
-                <div className="sm:col-span-2">
-                  <Field label="Tell us about your space" name="message" textarea required />
-                </div>
-                 <Button
-                  type="submit"
-                  disabled={sending}
-                   className="sm:col-span-2 mt-2 h-12 rounded-sm bg-sage-deep text-primary-foreground px-8 hover:bg-charcoal disabled:opacity-60 text-xs uppercase font-extrabold"
-                >
-                  {sending ? "Sending…" : "Send Inquiry"} <Send size={16} />
-                 </Button>
-              </form>
-            </Reveal>
-          </div>
-
-          <aside className="lg:col-span-5 lg:pl-8">
-            <Reveal delay={200}>
-               <div className="bg-card rounded-sm p-8 md:p-10 border border-border">
-                 <h3 className="font-bold uppercase text-sm tracking-[0.1em]">Studio</h3>
-                <ul className="mt-6 space-y-5 text-sm">
-                  <li className="flex gap-4"><MapPin className="text-sage-deep shrink-0 mt-0.5" size={18} /> Shop-3, Floor-GRD, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Elphinstone Rly Stn (W), Delisle Road, Mumbai – 400013</li>
-                  <li className="flex gap-4"><Phone className="text-sage-deep shrink-0 mt-0.5" size={18} /> <span>+91 9324029464<br />+91 9820012617</span></li>
-                  <li className="flex gap-4"><Mail className="text-sage-deep shrink-0 mt-0.5" size={18} /> infinitespace09@gmail.com</li>
-                </ul>
-              </div>
-            </Reveal>
-          </aside>
-        </div>
-      </section>
-    </div>
-  );
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { business, pageHead } from "@/lib/site-content";
+import { enquirySchema, enquiryWhatsAppUrl, projectTypes } from "@/lib/enquiry";
+export const Route = createFileRoute("/contact")({head:()=>pageHead("Start a Project", "Discuss residential interiors, commercial fit-outs or complete turnkey contracting with Infinite Space Interiors in Mumbai.", "/contact"),component:Contact});
+function Contact(){
+ const [type,setType]=useState(""); const [errors,setErrors]=useState<Record<string,string>>({}); const [handoff,setHandoff]=useState("");
+ function submit(event:React.FormEvent<HTMLFormElement>){event.preventDefault();setHandoff("");const form=new FormData(event.currentTarget);const result=enquirySchema.safeParse({...Object.fromEntries(form),type});if(!result.success){const next:Record<string,string>={};for(const issue of result.error.issues) next[String(issue.path[0])]=issue.message;setErrors(next);return;}setErrors({});setHandoff(enquiryWhatsAppUrl(result.data));}
+ return <section className="bg-sage-soft page-intro"><div className="mx-auto max-w-7xl px-6"><p className="eyebrow text-sage-deep">Start a Project</p><h1 className="mt-5 display-title max-w-4xl">Let's discuss your interior project.</h1><p className="mt-6 max-w-2xl text-muted-foreground leading-relaxed">Residential interiors, commercial fit-outs or complete turnkey execution — tell us what your space needs.</p><div className="mt-10 grid lg:grid-cols-[1.35fr_.85fr] gap-10 lg:gap-16">
+ <div><form onSubmit={submit} noValidate onChange={()=>setHandoff("")} className="grid sm:grid-cols-2 gap-5">
+ <Field label="Name" name="name" required error={errors.name}/><Field label="Email" name="email" type="email" required error={errors.email}/><Field label="Phone" name="phone" type="tel" required error={errors.phone}/>
+ <div><label htmlFor="project-type" className="block text-xs uppercase font-bold mb-2">Project Type *</label><Select value={type} onValueChange={value=>{setType(value);setHandoff("");}}><SelectTrigger id="project-type" aria-invalid={!!errors.type} aria-describedby={errors.type ? "type-error" : undefined} className="bg-card h-12"><SelectValue placeholder="Select project type"/></SelectTrigger><SelectContent>{projectTypes.map(option=><SelectItem value={option} key={option}>{option}</SelectItem>)}</SelectContent></Select>{errors.type && <p id="type-error" className="mt-2 text-xs text-destructive">{errors.type}</p>}</div>
+ <Field label="Project Location" name="location" required error={errors.location}/><Field label="Approximate Budget (optional)" name="budget" placeholder="Your budget, if known" error={errors.budget}/><div className="sm:col-span-2"><Field label="Project Requirements / Message" name="message" textarea required error={errors.message}/></div>
+ <div className="sm:col-span-2"><p className="text-xs leading-relaxed text-muted-foreground">Enquiries are sent through WhatsApp. Preparing your enquiry does not send it; press Send in WhatsApp to contact us.</p><Button type="submit" className="mt-5 h-12 uppercase text-xs font-bold">Prepare WhatsApp Enquiry <ArrowUpRight size={16}/></Button>{Object.keys(errors).length>0 && <p role="alert" className="mt-3 text-sm text-destructive">Please check the highlighted fields.</p>}
+ {handoff && <div className="mt-6 border-t border-border pt-5" role="status"><h2 className="text-2xl uppercase">Your enquiry is ready — not yet sent.</h2><p className="mt-3 text-sm text-muted-foreground">Continue to WhatsApp, review your message, then press Send.</p><Button asChild className="mt-4"><a href={handoff} target="_blank" rel="noopener noreferrer">Continue to WhatsApp <ArrowUpRight size={16}/></a></Button></div>}
+ </div></form></div>
+ <aside className="border-t border-border pt-6 lg:pt-0 lg:border-t-0"><h2 className="text-3xl uppercase">Contact & Workshop</h2><ul className="mt-7 space-y-6 text-sm leading-relaxed"><li className="flex gap-4"><MapPin size={19} className="text-primary shrink-0 mt-1"/><address className="not-italic">{business.address}</address></li><li className="flex gap-4"><Phone size={19} className="text-primary shrink-0 mt-1"/><div className="space-y-2"><a className="block hover:text-primary" href="tel:+919324029464">+91 9324029464</a><a className="block hover:text-primary" href="tel:+919820012617">+91 9820012617</a></div></li><li className="flex gap-4"><Mail size={19} className="text-primary shrink-0 mt-1"/><a href={`mailto:${business.email}`} className="break-all hover:text-primary">{business.email}</a></li></ul><Button asChild variant="outline" className="mt-7"><a href="https://wa.me/919324029464" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <ArrowUpRight size={16}/></a></Button></aside>
+ </div></div></section>;
 }
-
-function Field({ label, name, type = "text", required, textarea, placeholder }: {
-  label: string; name: string; type?: string; required?: boolean; textarea?: boolean; placeholder?: string;
-}) {
-  const base = "mt-2 w-full bg-transparent border-b border-border focus:border-sage-deep outline-none py-3 text-foreground placeholder:text-muted-foreground/60 transition-colors";
-  return (
-    <label className="block">
-      <span className="text-xs tracking-widest uppercase text-muted-foreground">{label}{required && " *"}</span>
-      {textarea ? (
-        <textarea name={name} required={required} rows={4} placeholder={placeholder} className={base} />
-      ) : (
-        <input name={name} type={type} required={required} placeholder={placeholder} className={base} />
-      )}
-    </label>
-  );
-}
+function Field({label,name,type="text",required,error,textarea,placeholder}:{label:string;name:string;type?:string;required?:boolean;error?:string;textarea?:boolean;placeholder?:string}){const props={id:name,name,required,placeholder,"aria-invalid":!!error,"aria-describedby":error?`${name}-error`:undefined,className:"bg-card h-12"};return <div><label htmlFor={name} className="block text-xs uppercase font-bold mb-2">{label}{required && " *"}</label>{textarea?<Textarea {...props} rows={5} className="bg-card min-h-36"/>:<Input {...props} type={type} autoComplete={name==="name"?"name":name==="email"?"email":name==="phone"?"tel":undefined}/>} {error && <p id={`${name}-error`} className="mt-2 text-xs text-destructive">{error}</p>}</div>}

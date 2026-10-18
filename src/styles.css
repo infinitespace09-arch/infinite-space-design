@@ -111,3 +111,8 @@
 .section-wave-dark { --wave-next: var(--charcoal); }
 .section-wave-blush { --wave-next: var(--sage-soft); }
 .section-wave-light { --wave-next: var(--background); }
+
+.page-intro { padding-top: 8rem; padding-bottom: 3.5rem; }
+@media (min-width: 1024px) { .page-intro { padding-top: 10rem; padding-bottom: 4rem; } }
+@layer base { body { overflow-wrap: break-word; } section { scroll-margin-top: 7rem; } }
+@media (prefers-reduced-motion: reduce) { .hover-zoom img { transition: none; } .hover-zoom:hover img { transform: none; } }
