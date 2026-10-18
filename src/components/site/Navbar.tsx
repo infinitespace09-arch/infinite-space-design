@@ -17,7 +17,7 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed top-3 inset-x-3 md:top-5 md:inset-x-6 z-50 mx-auto max-w-[1500px] bg-card text-card-foreground shadow-md rounded-sm">
+    <header className="fixed top-3 inset-x-3 md:top-5 md:inset-x-6 z-50 mx-auto max-w-[1500px] header-glass text-card-foreground shadow-md rounded-sm">
       <div className="flex h-[72px] md:h-[84px] items-center justify-between gap-4 px-4 md:px-7">
         <Link to="/" aria-label="Infinite Space Interiors home" className="shrink-0 flex items-center">
           <img src={logo} alt="Infinite Space Interiors" className="brand-logo w-[160px] md:w-[190px] h-auto" />
@@ -32,7 +32,7 @@ export function Navbar() {
         </Button>
         <Button variant="ghost" size="icon" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} className="lg:hidden" onClick={() => setOpen(v => !v)}>{open ? <X /> : <Menu />}</Button>
       </div>
-      {open && <nav aria-label="Mobile navigation" className="lg:hidden border-t border-border px-5 py-3 grid grid-cols-2 gap-1 bg-card">
+      {open && <nav aria-label="Mobile navigation" className="lg:hidden border-t border-border px-5 py-3 grid grid-cols-2 gap-1 header-glass">
         {links.map(l => <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="py-3 text-xs font-extrabold uppercase hover:text-sage-deep">{l.label}</Link>)}
          <Button asChild className="col-span-2 mt-2 uppercase text-xs font-extrabold"><a href="tel:+919324029464" onClick={() => setOpen(false)}>Call Now <ArrowUpRight size={16}/></a></Button>
       </nav>}

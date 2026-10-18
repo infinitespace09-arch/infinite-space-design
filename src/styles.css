@@ -136,6 +136,10 @@
 .service-detail:hover svg { transform: translateY(-2px); }
 aside a:hover svg { transform: translateY(-2px); }
 .whatsapp-float:hover { transform: scale(1.05); box-shadow: 0 8px 24px color-mix(in oklab, var(--charcoal) 25%, transparent); }
+.header-glass {
+  background: color-mix(in srgb, var(--card) 72%, transparent);
+  backdrop-filter: blur(20px) saturate(160%);
+}
 @media (prefers-reduced-motion: reduce) {
   .hero-crossfade { animation: none; }
   .brand-logo, .site-button, .site-button svg, .nav-link::after, .service-detail, .service-detail svg, aside svg, .whatsapp-float, footer a svg, .group svg { transition: none; }
