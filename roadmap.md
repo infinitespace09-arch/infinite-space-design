@@ -30,3 +30,4 @@
 - [x] Add Bajaj — Sambhaji Nagar photos (9: bathrooms, vanities, bathtub, wardrobes) to Projects Gallery under Residential Interiors
 - [x] Remove all non-client photos and standardize every client photo to a responsive 4:3 crop
 - [x] Add Satyjeet Boss — Kolkata photos (4: bedrooms with mural feature wall, wardrobe) to Projects Gallery under Residential Interiors
+- [x] Kamal Jain — Worli: added 5 new photos (wardrobes with gold accents, TV unit, false ceiling) to the existing entry — 13 shots total.
