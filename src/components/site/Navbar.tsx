@@ -2,8 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/infinite-space-logo.png.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/infinite-space-logo-transparent.png";
 
 const links = [
   { to: "/", label: "Home" },
