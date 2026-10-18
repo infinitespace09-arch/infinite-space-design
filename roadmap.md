@@ -27,4 +27,5 @@
 - [x] Add six additional Mehul Thakkar — Powai photos (living areas, swing, Ganesha entry, kitchen) to Projects Gallery
 - [x] Add Bhoomi World — Bhiwandi office photos (6: workstations, lime paneling, desk detail) to Projects Gallery under Office Interiors
 - [x] Add Kajaria — Sambhaji Nagar & Kolkata photos (9: living areas, bathrooms, bedrooms, cane wardrobe) to Projects Gallery under Residential Interiors
+- [x] Add Bajaj — Sambhaji Nagar photos (9: bathrooms, vanities, bathtub, wardrobes) to Projects Gallery under Residential Interiors
 - [x] Remove all non-client photos and standardize every client photo to a responsive 4:3 crop
