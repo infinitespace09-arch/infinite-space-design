@@ -32,7 +32,7 @@ export function Navbar() {
         </Button>
         <Button variant="ghost" size="icon" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} className="lg:hidden" onClick={() => setOpen(v => !v)}>{open ? <X /> : <Menu />}</Button>
       </div>
-      {open && <nav aria-label="Mobile navigation" className="lg:hidden border-t border-border px-5 py-3 grid grid-cols-2 gap-1 bg-card">
+      {open && <nav aria-label="Mobile navigation" className="lg:hidden border-t border-border px-5 py-3 grid grid-cols-2 gap-1 header-glass">
         {links.map(l => <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="py-3 text-xs font-extrabold uppercase hover:text-sage-deep">{l.label}</Link>)}
          <Button asChild className="col-span-2 mt-2 uppercase text-xs font-extrabold"><a href="tel:+919324029464" onClick={() => setOpen(false)}>Call Now <ArrowUpRight size={16}/></a></Button>
       </nav>}
