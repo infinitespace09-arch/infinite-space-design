@@ -1,4 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
+import bajajBathroomFlutedOne from "@/assets/bajaj-sambhaji-bathroom-fluted-1.jpg.asset.json";
+import bajajBathroomFlutedTwo from "@/assets/bajaj-sambhaji-bathroom-fluted-2.jpg.asset.json";
+import bajajVanity from "@/assets/bajaj-sambhaji-vanity.jpg.asset.json";
+import bajajSlidingWardrobe from "@/assets/bajaj-sambhaji-sliding-wardrobe.jpg.asset.json";
+import bajajBathroomEntry from "@/assets/bajaj-sambhaji-bathroom-entry.jpg.asset.json";
+import bajajBathroomVanity from "@/assets/bajaj-sambhaji-bathroom-vanity.jpg.asset.json";
+import bajajWalkinWardrobe from "@/assets/bajaj-sambhaji-walkin-wardrobe.jpg.asset.json";
+import bajajBathtub from "@/assets/bajaj-sambhaji-bathtub.jpg.asset.json";
+import bajajWardrobe from "@/assets/bajaj-sambhaji-wardrobe.jpg.asset.json";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
 import kajariaLivingOne from "@/assets/kajaria-living-1.jpg.asset.json";
@@ -136,6 +145,15 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: bajajBathroomFlutedOne.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajBathroomFlutedTwo.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajVanity.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajSlidingWardrobe.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajBathroomEntry.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajBathroomVanity.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajWalkinWardrobe.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajBathtub.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
+  { img: bajajWardrobe.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
   { img: kajariaLivingOne.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
   { img: kajariaLivingTwo.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
   { img: kajariaLivingThree.url, t: "Kajaria — Sambhaji Nagar & Kolkata", c: "Residential Interiors", loc: "Sambhaji Nagar & Kolkata" },
