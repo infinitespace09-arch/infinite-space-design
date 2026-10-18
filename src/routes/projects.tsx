@@ -130,6 +130,11 @@ import mehulEntryGanesha from "@/assets/mehul-thakkar-powai-entry-ganesha.jpg.as
 import mehulLivingTwo from "@/assets/mehul-thakkar-powai-living-2.jpg.asset.json";
 import mehulSwingBalcony from "@/assets/mehul-thakkar-powai-swing-balcony.jpg.asset.json";
 import mehulKitchenGlassDoor from "@/assets/mehul-thakkar-powai-kitchen-glass-door.jpg.asset.json";
+import kamalJainWardrobeGoldOne from "@/assets/kamal-jain-worli-wardrobe-gold-1.jpg.asset.json";
+import kamalJainWardrobeGrey from "@/assets/kamal-jain-worli-wardrobe-grey.jpg.asset.json";
+import kamalJainTvUnit from "@/assets/kamal-jain-worli-tv-unit.jpg.asset.json";
+import kamalJainWardrobeGoldTwo from "@/assets/kamal-jain-worli-wardrobe-gold-2.jpg.asset.json";
+import kamalJainCeiling from "@/assets/kamal-jain-worli-ceiling.jpg.asset.json";
 
 
 
@@ -149,6 +154,11 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: kamalJainWardrobeGoldOne.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWardrobeGrey.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainTvUnit.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainWardrobeGoldTwo.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
+  { img: kamalJainCeiling.url, t: "Kamal Jain — Worli", c: "Residential Interiors", loc: "Worli" },
   { img: satyjeetBedroomOne.url, t: "Satyjeet Boss — Kolkata", c: "Residential Interiors", loc: "Kolkata" },
   { img: satyjeetBedroomTwo.url, t: "Satyjeet Boss — Kolkata", c: "Residential Interiors", loc: "Kolkata" },
   { img: satyjeetBedroomThree.url, t: "Satyjeet Boss — Kolkata", c: "Residential Interiors", loc: "Kolkata" },
