@@ -1,3 +1,4 @@
+/// <reference types="bun" />
 import { describe, expect, test } from "bun:test";
 import { projects, filterProjects } from "./projects";
 describe("Project catalogue", () => {

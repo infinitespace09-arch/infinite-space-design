@@ -1,3 +1,4 @@
+/// <reference types="bun" />
 import { expect, test } from "bun:test";
 import { enquirySchema, enquiryWhatsAppUrl, projectTypes } from "./enquiry";
 const enquiry = {name:"Test Enquiry",email:"test@example.com",phone:"+91 9324029464",type:"Residential" as const,location:"Mumbai",budget:"Not decided",message:"Interior execution for a home."};
