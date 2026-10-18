@@ -1,0 +1,13 @@
+# Netlify deployment for the TanStack Start (SSR) site.
+# Nitro (already bundled through @lovable.dev/vite-tanstack-config) builds the
+# Netlify target: static files go to `dist`, the SSR server function goes to
+# `.netlify/functions-internal/server` and Netlify picks it up automatically.
+# Lovable builds ignore NITRO_PRESET and keep their Cloudflare output.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "22"
