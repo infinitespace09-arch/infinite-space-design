@@ -1,8 +1,8 @@
 # Infinite Space Interiors — Roadmap
 
-- [ ] Recover original service items and correctly labelled homepage statistics from history
-- [ ] Add genuine multi-photo hero slideshow, Call Now, Retail filter and workshop map
-- [ ] Polish lightweight interactions and verify every page across desktop, tablet and mobile
+- [x] Recover all eight original service items and all four correctly labelled homepage statistics from history
+- [x] Add genuine multi-photo hero slideshow, Call Now, Retail filter and workshop map
+- [x] Polish lightweight interactions; verify every page at 1920, 1280, 774, 430 and 375px and all 133 gallery photographs
 
 - [x] Refine homepage, About and Services around turnkey execution; preserve brand and genuine photographs
 - [x] Group all 133 photos into 14 actual projects with Residential/Commercial filters and project galleries
@@ -10,7 +10,7 @@
 - [x] Refine contact form; remove false success and verify WhatsApp preparation and validation (no delivery claimed)
 - [x] Verify all pages, photos, filters and navigation on desktop/tablet/mobile
 - [x] Preserve WhatsApp enquiry preparation; direct online delivery is not requested
-- [ ] Confirm previously supplied 15+ years experience and business totals before restoring homepage counters
+- [x] Recover original company totals and 15+ Years experience from prior company-content revision, including original + suffixes
 
 - [x] Restyle site to reference design (dark hero, inset header, burnt-orange accents)
 - [x] Replace all placeholder content with real company information

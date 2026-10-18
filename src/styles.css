@@ -132,9 +132,12 @@
 .nav-link:focus-visible { outline: 2px solid var(--ring); outline-offset: 5px; }
 .service-detail { transition: transform .3s ease; }
 .service-detail:hover { transform: translateY(-3px); }
+.service-detail svg { transition: transform .3s ease; }
+.service-detail:hover svg { transform: translateY(-2px); }
+aside a:hover svg { transform: translateY(-2px); }
 .whatsapp-float:hover { transform: scale(1.05); box-shadow: 0 8px 24px color-mix(in oklab, var(--charcoal) 25%, transparent); }
 @media (prefers-reduced-motion: reduce) {
   .hero-crossfade { animation: none; }
-  .brand-logo, .site-button, .site-button svg, .nav-link::after, .service-detail, .whatsapp-float, footer a svg, .group svg { transition: none; }
-  .brand-logo:hover, .site-button:hover, .site-button:active, .site-button:hover svg, .group:hover svg, footer a:hover svg, .service-detail:hover, .whatsapp-float:hover { transform: none; }
+  .brand-logo, .site-button, .site-button svg, .nav-link::after, .service-detail, .service-detail svg, aside svg, .whatsapp-float, footer a svg, .group svg { transition: none; }
+  .brand-logo:hover, .site-button:hover, .site-button:active, .site-button:hover svg, .group:hover svg, footer a:hover svg, .service-detail:hover, .service-detail:hover svg, aside a:hover svg, .whatsapp-float:hover { transform: none; }
 }

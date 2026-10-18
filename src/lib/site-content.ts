@@ -40,7 +40,7 @@ export const individualServices = [
   { title: "POP & Gypsum", group: 2, detail: "POP work and gypsum ceilings within the agreed project requirements." },
   { title: "Paint & Polish", group: 2, detail: "Painting, polishing and final finishing." },
   { title: "Modular Furniture", group: 0, detail: "Modular kitchens, wardrobes and custom storage." },
-  { title: "Turnkey Interiors", group: 1, detail: "Material selection, procurement, site coordination, installation, inspection and handover for residential and commercial interiors." },
+  { title: "Turnkey Interiors", group: 2, detail: "Material selection, procurement, site coordination, installation, inspection and handover for residential and commercial interiors." },
 ];
 
 export function pageHead(title: string, description: string, path: string) {
