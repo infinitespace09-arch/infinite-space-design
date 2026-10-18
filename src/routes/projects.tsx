@@ -149,6 +149,10 @@ export const Route = createFileRoute("/projects")({
 });
 
 const all = [
+  { img: satyjeetBedroomOne.url, t: "Satyjeet Boss — Kolkata", c: "Residential Interiors", loc: "Kolkata" },
+  { img: satyjeetBedroomTwo.url, t: "Satyjeet Boss — Kolkata", c: "Residential Interiors", loc: "Kolkata" },
+  { img: satyjeetBedroomThree.url, t: "Satyjeet Boss — Kolkata", c: "Residential Interiors", loc: "Kolkata" },
+  { img: satyjeetWardrobe.url, t: "Satyjeet Boss — Kolkata", c: "Residential Interiors", loc: "Kolkata" },
   { img: bajajBathroomFlutedOne.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
   { img: bajajBathroomFlutedTwo.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
   { img: bajajVanity.url, t: "Bajaj — Sambhaji Nagar", c: "Residential Interiors", loc: "Sambhaji Nagar" },
