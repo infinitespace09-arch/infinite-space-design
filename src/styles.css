@@ -116,3 +116,25 @@
 @media (min-width: 1024px) { .page-intro { padding-top: 10rem; padding-bottom: 4rem; } }
 @layer base { body { overflow-wrap: break-word; } section { scroll-margin-top: 7rem; } }
 @media (prefers-reduced-motion: reduce) { .hover-zoom img { transition: none; } .hover-zoom:hover img { transform: none; } }
+
+.hero-crossfade { animation: hero-crossfade 1.2s ease both; }
+@keyframes hero-crossfade { from { opacity: 0; } to { opacity: 1; } }
+.brand-logo { transition: transform .3s ease; transform-origin: center; }
+.brand-logo:hover { transform: scale(1.05); }
+.site-button, .whatsapp-float { transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease; }
+.button-elevate:hover { transform: scale(1.025); box-shadow: 0 6px 16px color-mix(in oklab, var(--charcoal) 18%, transparent); }
+.site-button:active { transform: scale(.98); }
+.site-button svg, footer a svg, aside svg, .group svg { transition: transform .3s ease; }
+.site-button:hover svg, footer a:hover svg, .group:hover svg { transform: translateX(2px); }
+.nav-link { position: relative; padding-block: 6px; }
+.nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+.nav-link:hover::after, .nav-link:focus-visible::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
+.nav-link:focus-visible { outline: 2px solid var(--ring); outline-offset: 5px; }
+.service-detail { transition: transform .3s ease; }
+.service-detail:hover { transform: translateY(-3px); }
+.whatsapp-float:hover { transform: scale(1.05); box-shadow: 0 8px 24px color-mix(in oklab, var(--charcoal) 25%, transparent); }
+@media (prefers-reduced-motion: reduce) {
+  .hero-crossfade { animation: none; }
+  .brand-logo, .site-button, .site-button svg, .nav-link::after, .service-detail, .whatsapp-float, footer a svg, .group svg { transition: none; }
+  .brand-logo:hover, .site-button:hover, .site-button:active, .site-button:hover svg, .group:hover svg, footer a:hover svg, .service-detail:hover, .whatsapp-float:hover { transform: none; }
+}

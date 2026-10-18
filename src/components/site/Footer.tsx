@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, ArrowUpRight } from "lucide-react";
 import logoAsset from "@/assets/infinite-space-logo.png.asset.json";
+import { business } from "@/lib/site-content";
 const logo = logoAsset.url;
 
 export function Footer() {
@@ -9,7 +10,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-7">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <div className="bg-card rounded-sm w-fit p-2"><img src={logo} alt="Infinite Space Interiors" className="w-[190px] h-auto" /></div>
+            <div className="bg-card rounded-sm w-fit p-2"><img src={logo} alt="Infinite Space Interiors" className="brand-logo w-[190px] h-auto" /></div>
             <p className="mt-6 max-w-xs text-sm text-cream/65 leading-relaxed">Interior design and turnkey contracting. Coordinating civil work, services, furniture and finishing through to final handover.</p>
             <p className="mt-5 text-xs font-extrabold uppercase text-sage">Design • Build • Transform</p>
           </div>
@@ -21,7 +22,7 @@ export function Footer() {
           </div>
           <div className="md:col-span-3">
             <h4 className="text-xl uppercase">Workshop</h4>
-            <p className="mt-5 text-sm text-cream/70 leading-relaxed">Shop-3, Floor-GRD, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Elphinstone Rly Stn (W), Delisle Road, Mumbai – 400013</p>
+            <p className="mt-5 text-sm text-cream/70 leading-relaxed">{business.address}</p>
           </div>
           <div className="md:col-span-3">
             <h4 className="text-xl uppercase">Contact Us</h4>

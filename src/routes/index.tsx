@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Check, Home as HomeIcon, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
+import { HeroSlideshow } from "@/components/site/HeroSlideshow";
 import { business, pageHead, processSteps, serviceGroups } from "@/lib/site-content";
 import { projects } from "@/lib/projects";
 import living from "@/assets/sagar-bhai-mira-bhayander-living-1.jpg.asset.json";
@@ -10,7 +11,7 @@ export const Route = createFileRoute("/")({head:()=>pageHead("Interior Design & 
 const selectedNames=["Sagar Bhai — Mira Bhayander","Axxela — Andheri","TONI&GUY Salon — Andheri"];
 function Home(){return <div>
  <section className="relative bg-charcoal text-cream section-wave section-wave-light overflow-hidden">
-  <img src={living.url} alt="Completed Sagar Bhai living room in Mira Bhayander" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover"/>
+  <HeroSlideshow/>
   <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/30"/>
   <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-16 lg:pt-44 lg:pb-24">
    <p className="eyebrow text-cream/85">Infinite Space Interiors</p><p className="mt-5 text-xs font-bold uppercase text-cream/80">Design • Build • Transform</p>

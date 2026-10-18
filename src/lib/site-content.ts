@@ -1,9 +1,12 @@
 export const business = {
   headline: "Interior Design & Turnkey Contracting",
   supporting: "From planning and civil work to services coordination, custom furniture, finishing, and final handover — we manage your interior project from start to finish.",
-  address: "Shop-3, Floor-GRD, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Elphinstone Rly Stn (W), Delisle Road, Mumbai – 400013",
+  address: "Shop-3, Floor-GRD, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Elphinstone Railway Station (West), Delisle Road, Mumbai – 400013.",
   email: "infinitespace09@gmail.com",
 };
+
+export const workshopMapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(business.address)}&output=embed`;
+export const workshopDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(business.address)}`;
 
 export const processSteps = [
   { title: "Consultation & Site Visit", description: "Discuss the space, requirements and practical site conditions." },
