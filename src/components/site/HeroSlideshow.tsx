@@ -2,19 +2,19 @@ import { useEffect, useState } from "react";
 import { Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import living from "@/assets/sagar-bhai-mira-bhayander-living-1.jpg.asset.json";
-import kitchen from "@/assets/iqbal-bhai-jogeshwari-kitchen.jpg.asset.json";
+import mehulLiving from "@/assets/mehul-thakkar-powai-living-2.jpg.asset.json";
 import bedroom from "@/assets/mehul-thakkar-powai-bedroom-headboard.jpg.asset.json";
-import office from "@/assets/axxela-andheri-reception.jpg.asset.json";
-import salon from "@/assets/toni-guy-andheri-interior-1.jpg.asset.json";
-import workstations from "@/assets/bhoomi-world-bhiwandi-workstations-wide.png.asset.json";
+import swing from "@/assets/mehul-thakkar-powai-living-swing.jpg.asset.json";
+import sagarLiving from "@/assets/sagar-bhai-mira-bhayander-living-2.jpg.asset.json";
+import workstations from "@/assets/bhoomi-world-bhiwandi-workstations-3.jpg.asset.json";
 
 const slides = [
+  { src: mehulLiving.url, alt: "Mehul Thakkar living room — Powai" },
   { src: living.url, alt: "Sagar Bhai living room — Mira Bhayander" },
-  { src: kitchen.url, alt: "Iqbal Bhai kitchen — Jogeshwari" },
-  { src: bedroom.url, alt: "Mehul Thakkar bedroom — Powai" },
-  { src: office.url, alt: "Axxela office reception — Andheri" },
-  { src: salon.url, alt: "TONI&GUY salon interior — Andheri" },
   { src: workstations.url, alt: "Bhoomi World office — Bhiwandi" },
+  { src: swing.url, alt: "Mehul Thakkar living room with swing — Powai" },
+  { src: sagarLiving.url, alt: "Sagar Bhai living room seating — Mira Bhayander" },
+  { src: bedroom.url, alt: "Mehul Thakkar bedroom — Powai" },
 ];
 
 export function HeroSlideshow() {

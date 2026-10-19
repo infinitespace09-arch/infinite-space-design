@@ -10,14 +10,14 @@ import office from "@/assets/axxela-andheri-reception.jpg.asset.json";
 export const Route = createFileRoute("/")({head:()=>pageHead("Interior Design & Turnkey Contracting", "Infinite Space Interiors — complete residential and commercial interior project execution, furniture, finishing and final handover in Mumbai.", "/"),component:Home});
 const selectedNames=["Sagar Bhai — Mira Bhayander","Axxela — Andheri","TONI&GUY Salon — Andheri"];
 function Home(){return <div>
- <section className="relative bg-charcoal text-cream section-wave section-wave-light overflow-hidden">
+ <section className="relative min-h-[580px] lg:min-h-[640px] bg-charcoal text-cream section-wave section-wave-light overflow-hidden">
   <HeroSlideshow/>
-  <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/30"/>
-  <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-16 lg:pt-44 lg:pb-24">
-   <p className="eyebrow text-cream/85">Infinite Space Interiors</p><p className="mt-5 text-xs font-bold uppercase text-cream/80">Design • Build • Transform</p>
-   <h1 className="mt-5 display-title max-w-4xl">Interior Design &amp; Turnkey Contracting</h1>
-   <p className="mt-6 max-w-xl text-sm md:text-base text-cream/85 leading-relaxed">{business.supporting}</p>
-   <div className="mt-8 flex flex-wrap gap-3"><Button asChild className="h-12 uppercase text-xs font-bold"><Link to="/contact">Start a Project <ArrowUpRight size={16}/></Link></Button><Button asChild variant="outline" className="h-12 border-cream/60 text-cream bg-transparent hover:bg-cream hover:text-charcoal uppercase text-xs font-bold"><Link to="/projects">View Our Projects <ArrowUpRight size={16}/></Link></Button></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/25 to-transparent lg:via-charcoal/10"/>
+  <div className="relative mx-auto max-w-7xl px-6 pt-40 pb-20 lg:pt-52 lg:pb-24">
+   <p className="eyebrow text-cream/85">Infinite Space Interiors</p><p className="mt-3 text-xs font-bold uppercase text-cream/80">Design • Build • Transform</p>
+   <h1 className="mt-4 max-w-sm text-4xl lg:text-5xl uppercase leading-tight">Interior Design &amp; Turnkey Contracting</h1>
+   <p className="mt-4 max-w-sm text-xs md:text-sm text-cream/85 leading-relaxed">{business.supporting}</p>
+   <div className="mt-6 flex flex-wrap gap-3"><Button asChild className="h-10 uppercase text-xs font-bold"><Link to="/contact">Start a Project <ArrowUpRight size={16}/></Link></Button><Button asChild variant="outline" className="h-10 border-cream/60 text-cream bg-transparent hover:bg-cream hover:text-charcoal uppercase text-xs font-bold"><Link to="/projects">View Our Projects <ArrowUpRight size={16}/></Link></Button></div>
   </div>
  </section>
  <section className="py-14 lg:py-20"><div className="mx-auto max-w-7xl px-6"><div className="grid lg:grid-cols-[.8fr_1.2fr] gap-8 lg:gap-16"><Reveal><p className="eyebrow text-sage-deep">Built Around Your Project</p><h2 className="mt-5 text-4xl md:text-5xl uppercase">Design thinking.<br/>Practical execution.</h2></Reveal><Reveal><p className="text-sm text-muted-foreground leading-relaxed">Infinite Space Interiors is an interior design and turnkey contracting company with over 15 years of experience. We combine design, quality craftsmanship and detailed project execution for residential, commercial and retail spaces.</p><p className="mt-4 text-sm text-muted-foreground leading-relaxed">From site coordination and construction to custom furniture, finishing and handover, our focus is on bringing the agreed interior scope together.</p><Button asChild variant="outline" className="mt-6 uppercase text-xs font-bold"><Link to="/about">About Infinite Space <ArrowUpRight size={16}/></Link></Button></Reveal></div>
