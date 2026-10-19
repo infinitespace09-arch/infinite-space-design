@@ -11,3 +11,11 @@
 [build.environment]
   NITRO_PRESET = "netlify"
   NODE_VERSION = "22"
+
+# Uploaded photo pointers use Lovable's asset service, not files in `dist`.
+# Proxy before the generated SSR fallback so photos remain image responses.
+[[redirects]]
+  from = "/__l5e/assets-v1/*"
+  to = "https://infinite-space-design.lovable.app/__l5e/assets-v1/:splat"
+  status = 200
+  force = true

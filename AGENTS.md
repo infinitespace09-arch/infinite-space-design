@@ -6,4 +6,6 @@
 - The enquiry form validates locally and prepares an explicitly labelled WhatsApp handoff; never report delivery from a browser handoff because no submission integration is configured.
 - Keep the legacy testimonials URL as a permanent redirect to the process page to preserve existing public links.
 - Keep the hero slideshow client-timed with decoded next-image loading and reduced-motion fallback; failed image loads must not replace visible content.
-- Derive map embeds and directions from the shared workshop address, never guessed coordinates, so contact details remain consistent.- Netlify deploys use `netlify.toml` with Nitro's `netlify` preset (publish `dist`); keep vite.config.ts/wrangler unchanged because Lovable builds pin Cloudflare and ignore NITRO_PRESET.
+- Derive map embeds and directions from the shared workshop address, never guessed coordinates, so contact details remain consistent.
+- Netlify deploys use `netlify.toml` with Nitro's `netlify` preset (publish `dist`); keep vite.config.ts/wrangler unchanged because Lovable builds pin Cloudflare and ignore NITRO_PRESET.
+- Netlify must proxy `/__l5e/assets-v1/*` to this project's published Lovable origin before the SSR fallback, because uploaded photo pointers reference a hosted asset service rather than bundled files.
