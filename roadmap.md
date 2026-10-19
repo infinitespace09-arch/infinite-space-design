@@ -1,7 +1,7 @@
 # Infinite Space Interiors — Roadmap
 
-- [ ] Refine only homepage hero with selected Mehul Thakkar, Sagar Bhai and Bhoomi World photos and compact left-aligned copy
-- [ ] Separate lightbox thumbnail row below main photo; verify desktop and mobile preview
+- [x] Refine only homepage hero with selected Mehul Thakkar, Sagar Bhai and Bhoomi World photos and compact left-aligned copy
+- [x] Separate lightbox thumbnail row below main photo; verify desktop and mobile preview
 
 - [x] Recover all eight original service items and all four correctly labelled homepage statistics from history
 - [x] Add genuine multi-photo hero slideshow, Call Now, Retail filter and workshop map
