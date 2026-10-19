@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -17,6 +17,10 @@ function Projects() {
   const filter = category || "All Projects";
   const [selected, setSelected] = useState<Project | null>(null);
   const [imageIndex, setImageIndex] = useState(0);
+  const thumbnailRow = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    thumbnailRow.current?.querySelector('[aria-pressed="true"]')?.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "instant" });
+  }, [imageIndex, selected]);
   function move(direction: number) { if (selected) setImageIndex(index => (index + direction + selected.images.length) % selected.images.length); }
   return <div>
     <section className="bg-sage-soft page-intro section-wave section-wave-light"><div className="mx-auto max-w-7xl px-6">
@@ -33,11 +37,12 @@ function Projects() {
         </Button>
       </article>)}</div>
     </div></section>
-    <Dialog open={!!selected} onOpenChange={open => { if (!open) setSelected(null); }}><DialogContent className="max-w-4xl w-[calc(100%-2rem)] max-h-[90svh] overflow-y-auto p-4 md:p-6 rounded-sm" onKeyDown={event => {if(event.key === "ArrowLeft") move(-1); if(event.key === "ArrowRight") move(1);}}>
-      <DialogTitle className="pr-8 text-2xl uppercase">{selected?.name}</DialogTitle><DialogDescription>{selected?.category} Projects · {selected?.location}</DialogDescription>
-      {selected && <><div className="aspect-[4/3] bg-muted overflow-hidden"><img src={selected.images[imageIndex]} alt={`${selected.name} — project photograph ${imageIndex + 1}`} className="w-full h-full object-cover"/></div>
-        <div className="flex items-center justify-between"><Button size="icon" variant="outline" onClick={() => move(-1)} aria-label="Previous photograph"><ArrowLeft/></Button><p className="text-sm text-muted-foreground" aria-live="polite">{imageIndex + 1} / {selected.images.length}</p><Button size="icon" variant="outline" onClick={() => move(1)} aria-label="Next photograph"><ArrowRight/></Button></div>
-        <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">{selected.images.map((image,index) => <Button key={image} variant="ghost" aria-label={`View photograph ${index+1}`} aria-pressed={imageIndex===index} onClick={() => setImageIndex(index)} className={`p-0 h-auto aspect-[4/3] overflow-hidden rounded-sm border-2 ${imageIndex===index ? "border-primary" : "border-transparent"}`}><img src={image} alt={`${selected.name} thumbnail ${index+1}`} loading="lazy" className="w-full h-full object-cover"/></Button>)}</div>
+    <Dialog open={!!selected} onOpenChange={open => { if (!open) setSelected(null); }}><DialogContent className="flex flex-col max-w-5xl w-[calc(100%-2rem)] max-h-[90svh] overflow-y-auto gap-3 p-4 md:p-6 rounded-sm" onKeyDown={event => {if(event.key === "ArrowLeft") move(-1); if(event.key === "ArrowRight") move(1);}}>
+      <div className="shrink-0 space-y-2"><DialogTitle className="pr-8 text-2xl uppercase">{selected?.name}</DialogTitle><DialogDescription>{selected?.category} Projects · {selected?.location}</DialogDescription></div>
+      {selected && <><div data-gallery-main className="relative mx-auto w-[min(100%,calc((90svh-240px)*4/3))] aspect-[4/3] shrink-0 bg-muted overflow-hidden"><img src={selected.images[imageIndex]} alt={`${selected.name} — project photograph ${imageIndex + 1}`} className="w-full h-full object-cover"/>
+        <Button size="icon" variant="outline" className="absolute left-2 md:left-3 top-1/2 -translate-y-1/2 bg-card/90 hover:bg-card" onClick={() => move(-1)} aria-label="Previous photograph"><ArrowLeft/></Button><Button size="icon" variant="outline" className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 bg-card/90 hover:bg-card" onClick={() => move(1)} aria-label="Next photograph"><ArrowRight/></Button></div>
+        <p className="shrink-0 text-center text-sm text-muted-foreground" aria-live="polite">{imageIndex + 1} / {selected.images.length}</p>
+        <div ref={thumbnailRow} data-gallery-thumbnails className="flex shrink-0 gap-2 overflow-x-auto pb-1">{selected.images.map((image,index) => <Button key={image} variant="ghost" aria-label={`View photograph ${index+1}`} aria-pressed={imageIndex===index} onClick={() => setImageIndex(index)} className={`p-0 h-16 md:h-20 w-auto shrink-0 aspect-[4/3] overflow-hidden rounded-sm border-2 ${imageIndex===index ? "border-primary" : "border-transparent"}`}><img src={image} alt={`${selected.name} thumbnail ${index+1}`} loading="lazy" className="w-full h-full object-cover"/></Button>)}</div>
       </>}
     </DialogContent></Dialog>
   </div>;
