@@ -131,12 +131,23 @@ import kamalJainWardrobeGrey from "@/assets/kamal-jain-worli-wardrobe-grey.jpg.a
 import kamalJainTvUnit from "@/assets/kamal-jain-worli-tv-unit.jpg.asset.json";
 import kamalJainWardrobeGoldTwo from "@/assets/kamal-jain-worli-wardrobe-gold-2.jpg.asset.json";
 import kamalJainCeiling from "@/assets/kamal-jain-worli-ceiling.jpg.asset.json";
+import rimZimOne from "@/assets/rim-zim-clinic-vasai-road-01.jpg.asset.json";
+import rimZimTwo from "@/assets/rim-zim-clinic-vasai-road-02.jpg.asset.json";
+import rimZimThree from "@/assets/rim-zim-clinic-vasai-road-03.jpg.asset.json";
+import rimZimFour from "@/assets/rim-zim-clinic-vasai-road-04.jpg.asset.json";
+import rimZimFive from "@/assets/rim-zim-clinic-vasai-road-05.jpg.asset.json";
+import rimZimSix from "@/assets/rim-zim-clinic-vasai-road-06.jpg.asset.json";
+import rimZimSeven from "@/assets/rim-zim-clinic-vasai-road-07.jpg.asset.json";
+import rimZimEight from "@/assets/rim-zim-clinic-vasai-road-08.jpg.asset.json";
+import rimZimNine from "@/assets/rim-zim-clinic-vasai-road-09.jpg.asset.json";
+import rimZimTen from "@/assets/rim-zim-clinic-vasai-road-10.jpg.asset.json";
 
 export type ProjectCategory = "Residential" | "Commercial";
 export type ProjectFilter = "All Projects" | ProjectCategory | "Retail";
 export type Project = { id: string; name: string; category: ProjectCategory; sector?: "Retail"; location: string; cover: string; images: string[] };
 
 export const projects: Project[] = [
+  { id: "rim-zim-clinic-vasai-road", name: "Rim Zim Clinic \u2014 Vasai Road", category: "Commercial", location: "Vasai Road", cover: rimZimOne.url, images: [rimZimOne.url, rimZimTwo.url, rimZimThree.url, rimZimFour.url, rimZimFive.url, rimZimSix.url, rimZimSeven.url, rimZimEight.url, rimZimNine.url, rimZimTen.url] },
   { id: "kamal-jain-worli", name: "Kamal Jain \u2014 Worli", category: "Residential", location: "Worli", cover: kamalJainTvUnit.url, images: [kamalJainWardrobeGoldOne.url, kamalJainWardrobeGrey.url, kamalJainTvUnit.url, kamalJainWardrobeGoldTwo.url, kamalJainCeiling.url, kamalJainWa0033.url, kamalJainWa0036.url, kamalJainWa0023.url, kamalJainWa0026.url, kamalJainWa0027.url, kamalJainWa0047.url, kamalJainWa0049.url, kamalJainWa0053.url] },
   { id: "satyjeet-boss-kolkata", name: "Satyjeet Boss \u2014 Kolkata", category: "Residential", location: "Kolkata", cover: satyjeetBedroomOne.url, images: [satyjeetBedroomOne.url, satyjeetBedroomTwo.url, satyjeetBedroomThree.url, satyjeetWardrobe.url] },
   { id: "bajaj-sambhaji-nagar", name: "Bajaj \u2014 Sambhaji Nagar", category: "Residential", location: "Sambhaji Nagar", cover: bajajBathroomFlutedOne.url, images: [bajajBathroomFlutedOne.url, bajajBathroomFlutedTwo.url, bajajVanity.url, bajajSlidingWardrobe.url, bajajBathroomEntry.url, bajajBathroomVanity.url, bajajWalkinWardrobe.url, bajajBathtub.url, bajajWardrobe.url] },
