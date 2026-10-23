@@ -1,5 +1,6 @@
 # Infinite Space Interiors — Roadmap
 
+- [ ] Split uploaded bedroom montage into four original crops and add Sujit — Dahisar under Residential; verify gallery on desktop/mobile
 - [x] Add Rim Zim Clinic — Vasai Road photos (10: reception, lounge, consultation rooms, dental chairs) to Projects Gallery under Commercial Interiors
 - [x] Refine only homepage hero with selected Mehul Thakkar, Sagar Bhai and Bhoomi World photos and compact left-aligned copy
 - [x] Separate lightbox thumbnail row below main photo; verify desktop and mobile preview
