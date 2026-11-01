@@ -1,5 +1,7 @@
 # Infinite Space Interiors — Roadmap
 
+- [ ] Read the existing Google Business Profile from the shared Maps link and report what is missing or needs fixing
+
 - [x] Split uploaded bedroom montage into two original crops and add both to Mohan Ji — Dahisar (7 photos total)
 - [x] Add Mohan Ji — Dahisar photos (5: living room with home shrine, TV wall with daybed, TV lounge, two galley kitchen views) to Projects Gallery under Residential Interiors
 - [x] Add Sujit — Dahisar photos (5: two modular kitchen views, three living areas) to the existing entry — 9 shots total
