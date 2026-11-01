@@ -7,6 +7,11 @@ import sujitKitchenTwo from "@/assets/sujit-dahisar-kitchen-02.jpg.asset.json";
 import sujitLivingOne from "@/assets/sujit-dahisar-living-01.png.asset.json";
 import sujitLivingTwo from "@/assets/sujit-dahisar-living-02.png.asset.json";
 import sujitLivingThree from "@/assets/sujit-dahisar-living-03.png.asset.json";
+import mohanJiLivingOne from "@/assets/mohan-ji-dahisar-living-01.png.asset.json";
+import mohanJiLivingTwo from "@/assets/mohan-ji-dahisar-living-02.png.asset.json";
+import mohanJiLivingThree from "@/assets/mohan-ji-dahisar-living-03.png.asset.json";
+import mohanJiKitchenOne from "@/assets/mohan-ji-dahisar-kitchen-01.jpg.asset.json";
+import mohanJiKitchenTwo from "@/assets/mohan-ji-dahisar-kitchen-02.jpg.asset.json";
 import satyjeetBedroomOne from "@/assets/satyjeet-boss-kolkata-bedroom-1.jpg.asset.json";
 import satyjeetBedroomTwo from "@/assets/satyjeet-boss-kolkata-bedroom-2.jpg.asset.json";
 import satyjeetBedroomThree from "@/assets/satyjeet-boss-kolkata-bedroom-3.jpg.asset.json";
@@ -156,6 +161,7 @@ export type ProjectFilter = "All Projects" | ProjectCategory | "Retail";
 export type Project = { id: string; name: string; category: ProjectCategory; sector?: "Retail"; location: string; cover: string; images: string[] };
 
 export const projects: Project[] = [
+  { id: "mohan-ji-dahisar", name: "Mohan Ji \u2014 Dahisar", category: "Residential", location: "Dahisar", cover: mohanJiLivingOne.url, images: [mohanJiLivingOne.url, mohanJiLivingTwo.url, mohanJiLivingThree.url, mohanJiKitchenOne.url, mohanJiKitchenTwo.url] },
   { id: "sujit-dahisar", name: "Sujit — Dahisar", category: "Residential", location: "Dahisar", cover: sujitBedroomOne.url, images: [sujitBedroomOne.url, sujitBedroomTwo.url, sujitBedroomThree.url, sujitBedroomFour.url, sujitKitchenOne.url, sujitKitchenTwo.url, sujitLivingOne.url, sujitLivingTwo.url, sujitLivingThree.url] },
   { id: "rim-zim-clinic-vasai-road", name: "Rim Zim Clinic \u2014 Vasai Road", category: "Commercial", location: "Vasai Road", cover: rimZimOne.url, images: [rimZimOne.url, rimZimTwo.url, rimZimThree.url, rimZimFour.url, rimZimFive.url, rimZimSix.url, rimZimSeven.url, rimZimEight.url, rimZimNine.url, rimZimTen.url] },
   { id: "kamal-jain-worli", name: "Kamal Jain \u2014 Worli", category: "Residential", location: "Worli", cover: kamalJainTvUnit.url, images: [kamalJainWardrobeGoldOne.url, kamalJainWardrobeGrey.url, kamalJainTvUnit.url, kamalJainWardrobeGoldTwo.url, kamalJainCeiling.url, kamalJainWa0033.url, kamalJainWa0036.url, kamalJainWa0023.url, kamalJainWa0026.url, kamalJainWa0027.url, kamalJainWa0047.url, kamalJainWa0049.url, kamalJainWa0053.url] },
