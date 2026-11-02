@@ -1,8 +1,10 @@
 # Infinite Space Interiors — Roadmap
 
 - [x] Read the existing Google Business Profile from the shared Maps link and report what is missing or needs fixing
-- [ ] Confirm with the user which listing details to correct (phone number, opening hours, business name, address wording) and whether to connect Google Business Profile so edits can be made directly
-- [ ] Align the website's workshop address wording with the Google listing once the user confirms the correct wording
+- [x] Confirm listing details with the user: hours stay as published (on-site work), phones +91 9137463353 and +91 9820012617, workshop road is Fitwala Road
+- [x] Align the website's workshop address wording with the confirmed listing wording (Fitwala Road, Prabhadevi station)
+- [ ] Apply the Google listing edits: name "Infinite Space Interiors", add both phone numbers, fix the address wording (remove the stray ")", Masurkar → Madurkar, keep Fitwala Road) — needs the user's Google sign-in approval or business.google.com
+- [ ] Decide whether to add +91 9137463353 to the website contact page
 
 - [x] Split uploaded bedroom montage into two original crops and add both to Mohan Ji — Dahisar (7 photos total)
 - [x] Add Mohan Ji — Dahisar photos (5: living room with home shrine, TV wall with daybed, TV lounge, two galley kitchen views) to Projects Gallery under Residential Interiors

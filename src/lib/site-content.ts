@@ -1,7 +1,7 @@
 export const business = {
   headline: "Interior Design & Turnkey Contracting",
   supporting: "From planning and civil work to services coordination, custom furniture, finishing, and final handover — we manage your interior project from start to finish.",
-  address: "Shop-3, Floor-GRD, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Elphinstone Railway Station (West), Delisle Road, Mumbai – 400013.",
+  address: "Shop-3, Ground Floor, 6/6A, Aga Irani Building, Balashet Madurkar Marg, Near Prabhadevi Railway Station (West), Fitwala Road, Mumbai – 400013.",
   email: "infinitespace09@gmail.com",
 };
 
