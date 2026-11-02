@@ -11,5 +11,5 @@ export const enquirySchema = z.object({
 });
 export function enquiryWhatsAppUrl(data: z.infer<typeof enquirySchema>) {
   const message = `Project enquiry — Infinite Space Interiors\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nProject type: ${data.type}\nLocation: ${data.location}\nApproximate budget: ${data.budget || "Not specified"}\nRequirements: ${data.message}`;
-  return `https://wa.me/919324029464?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/919137463353?text=${encodeURIComponent(message)}`;
 }
