@@ -27,7 +27,7 @@ export function Footer() {
           <div className="md:col-span-3">
             <h4 className="text-xl uppercase">Contact Us</h4>
             <ul className="mt-5 space-y-4 text-sm text-cream/70">
-              <li><a className="flex items-center gap-3 hover:text-sage" href="tel:+919324029464"><Phone size={16} className="text-sage" />+91 9324029464</a></li>
+              <li><a className="flex items-center gap-3 hover:text-sage" href="tel:+919137463353"><Phone size={16} className="text-sage" />+91 9137463353</a></li>
               <li><a className="flex items-center gap-3 hover:text-sage" href="tel:+919820012617"><Phone size={16} className="text-sage" />+91 9820012617</a></li>
               <li><a className="flex items-center gap-3 hover:text-sage break-all" href="mailto:infinitespace09@gmail.com"><Mail size={16} className="shrink-0 text-sage" />infinitespace09@gmail.com</a></li>
             </ul>
