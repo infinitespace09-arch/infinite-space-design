@@ -157,12 +157,17 @@ import rimZimSeven from "@/assets/rim-zim-clinic-vasai-road-07.jpg.asset.json";
 import rimZimEight from "@/assets/rim-zim-clinic-vasai-road-08.jpg.asset.json";
 import rimZimNine from "@/assets/rim-zim-clinic-vasai-road-09.jpg.asset.json";
 import rimZimTen from "@/assets/rim-zim-clinic-vasai-road-10.jpg.asset.json";
+import rougeStations from "@/assets/rouge-salon-borivali-stations.webp.asset.json";
+import rougeLounge from "@/assets/rouge-salon-borivali-lounge.webp.asset.json";
+import rougePedicure from "@/assets/rouge-salon-borivali-pedicure.webp.asset.json";
+import rougeReception from "@/assets/rouge-salon-borivali-reception.webp.asset.json";
 
 export type ProjectCategory = "Residential" | "Commercial";
 export type ProjectFilter = "All Projects" | ProjectCategory | "Retail";
 export type Project = { id: string; name: string; category: ProjectCategory; sector?: "Retail"; location: string; cover: string; images: string[] };
 
 export const projects: Project[] = [
+  { id: "rouge-salon-academy-borivali", name: "Rouge Salon & Academy \u2014 Borivali West", category: "Commercial", sector: "Retail", location: "Borivali West", cover: rougeStations.url, images: [rougeStations.url, rougeReception.url, rougeLounge.url, rougePedicure.url] },
   { id: "mohan-ji-dahisar", name: "Mohan Ji \u2014 Dahisar", category: "Residential", location: "Dahisar", cover: mohanJiLivingOne.url, images: [mohanJiLivingOne.url, mohanJiLivingTwo.url, mohanJiLivingThree.url, mohanJiKitchenOne.url, mohanJiKitchenTwo.url, mohanJiBedroomOne.url, mohanJiBedroomTwo.url] },
   { id: "sujit-dahisar", name: "Sujit — Dahisar", category: "Residential", location: "Dahisar", cover: sujitBedroomOne.url, images: [sujitBedroomOne.url, sujitBedroomTwo.url, sujitBedroomThree.url, sujitBedroomFour.url, sujitKitchenOne.url, sujitKitchenTwo.url, sujitLivingOne.url, sujitLivingTwo.url, sujitLivingThree.url] },
   { id: "rim-zim-clinic-vasai-road", name: "Rim Zim Clinic \u2014 Vasai Road", category: "Commercial", location: "Vasai Road", cover: rimZimOne.url, images: [rimZimOne.url, rimZimTwo.url, rimZimThree.url, rimZimFour.url, rimZimFive.url, rimZimSix.url, rimZimSeven.url, rimZimEight.url, rimZimNine.url, rimZimTen.url] },
