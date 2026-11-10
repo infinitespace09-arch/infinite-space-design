@@ -2,16 +2,26 @@
 import { describe, expect, test } from "bun:test";
 import { projects, filterProjects } from "./projects";
 describe("Project catalogue", () => {
-  test("Retail shows the genuine TONI&GUY salon and retains its Commercial classification", () => {
-    expect(filterProjects("Retail").map(project => project.id)).toEqual(["toni-guy-salon-andheri"]);
+  test("Retail shows the genuine salons and retains their Commercial classification", () => {
+    expect(filterProjects("Retail").map(project => project.id)).toEqual(["rouge-salon-academy-borivali", "toni-guy-salon-andheri"]);
     expect(filterProjects("Commercial").some(project => project.id === "toni-guy-salon-andheri")).toBe(true);
+    expect(filterProjects("Commercial").some(project => project.id === "rouge-salon-academy-borivali")).toBe(true);
   });
-  test("all 150 existing photographs and the nine Sujit shots remain in 17 distinct projects", () => {
-    expect(projects).toHaveLength(17);
-    expect(projects.flatMap(project => project.images)).toHaveLength(159);
-    expect(new Set(projects.map(project => project.name)).size).toBe(17);
-    expect(new Set(projects.flatMap(project => project.images)).size).toBe(159);
-    expect(projects.filter(project => project.id !== "sujit-dahisar").flatMap(project => project.images)).toHaveLength(150);
+  test("Rouge Salon & Academy — Borivali West is a Retail salon with four photos", () => {
+    const matches = filterProjects("Retail").filter(project => project.name === "Rouge Salon & Academy — Borivali West");
+    expect(matches).toHaveLength(1);
+    expect(matches[0]?.location).toBe("Borivali West");
+    expect(matches[0]?.images.map(image => image.split("/").pop())).toEqual([
+      "rouge-salon-borivali-stations.webp", "rouge-salon-borivali-reception.webp",
+      "rouge-salon-borivali-lounge.webp", "rouge-salon-borivali-pedicure.webp",
+    ]);
+  });
+  test("all 154 existing photographs and the nine Sujit shots remain in 18 distinct projects", () => {
+    expect(projects).toHaveLength(18);
+    expect(projects.flatMap(project => project.images)).toHaveLength(163);
+    expect(new Set(projects.map(project => project.name)).size).toBe(18);
+    expect(new Set(projects.flatMap(project => project.images)).size).toBe(163);
+    expect(projects.filter(project => project.id !== "sujit-dahisar").flatMap(project => project.images)).toHaveLength(154);
   });
   test("Sujit — Dahisar contains the four crops plus the kitchen and living photos under Residential", () => {
     const matches = filterProjects("Residential").filter(project => project.name === "Sujit — Dahisar");
@@ -37,7 +47,7 @@ describe("Project catalogue", () => {
     expect(matches).toHaveLength(1);
     expect(matches[0]?.images).toHaveLength(10);
     expect(matches[0]?.location).toBe("Vasai Road");
-    expect(filterProjects("Retail")).toHaveLength(1);
+    expect(filterProjects("Retail")).toHaveLength(2);
   });
   test("Anil Bhai — Santacruz is one Residential project with four photos", () => {
     const matches = filterProjects("Residential").filter(project => project.name === "Anil Bhai — Santacruz");
@@ -52,9 +62,9 @@ describe("Project catalogue", () => {
     expect(project?.location).toBe("Andheri");
   });
   test("all filters partition projects without empty or overlapping categories", () => {
-    expect(filterProjects("All Projects")).toHaveLength(17);
+    expect(filterProjects("All Projects")).toHaveLength(18);
     expect(filterProjects("Residential")).toHaveLength(11);
-    expect(filterProjects("Commercial")).toHaveLength(6);
+    expect(filterProjects("Commercial")).toHaveLength(7);
     expect(filterProjects("Residential").every(project => project.category === "Residential")).toBe(true);
     expect(filterProjects("Commercial").every(project => project.category === "Commercial")).toBe(true);
   });
